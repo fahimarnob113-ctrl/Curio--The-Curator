@@ -2,7 +2,7 @@
 
 An offline-first, high-capacity visual catalog, asset organizer, and curation dashboard designed for game developers, digital artists, researchers, and creators.
 
-![CURIO Dashboard](screenshots/curio-dashboard.png)
+![CURIO Dashboard](Screenshots/curio-dashboard.png)
 
 [![HTML5 Single File](https://img.shields.io/badge/Architecture-Single--File%20HTML-E34F26?style=flat-square&logo=html5&logoColor=white)](index.html)
 [![Storage Engine](https://img.shields.io/badge/Storage-IndexedDB%20(Gigabyte%20Scale)-06B6D4?style=flat-square)](index.html)
@@ -15,7 +15,7 @@ An offline-first, high-capacity visual catalog, asset organizer, and curation da
 
 **CURIO** is a lightweight, zero-dependency curation workbench that lives in a single standalone HTML file. It allows you to collect, review, tag, rate, and organize software tools, digital assets, documentation, shaders, audio packs, and creative workflows with zero server setup.
 
-Unlike traditional cloud bookmarkers or notes apps, CURIO runs completely on your local machine, persists data in high-capacity **IndexedDB**, and packages backups into clean **.zip archives** containing both your structured JSON metadata and actual image files.
+Unlike traditional cloud bookmarkers or notes apps, CURIO runs completely on your local machine, persists data in high-capacity **IndexedDB**, and packages backups into clean **`.zip` archives** containing both your structured JSON metadata and actual image files.
 
 ---
 
@@ -49,19 +49,28 @@ Unlike traditional cloud bookmarkers or notes apps, CURIO runs completely on you
 ## ⚡ Core Features
 
 - **🗂️ Multi-Catalog Switching**: Switch instantly between independent catalogs (*Creative Tools*, *Game Dev*, *Combined Library*) with separate drawers, tags, and search scopes. Create, rename, or delete catalogs at will.
-- **💾 Gigabyte-Scale Local Storage (IndexedDB)**: Bypasses restrictive 5MB browser localStorage limits with native **IndexedDB (CyberDB)**. Upload high-resolution screenshot galleries and logos stored permanently on your disk.
+- **💾 Gigabyte-Scale Local Storage (IndexedDB)**: Bypasses restrictive 5MB browser `localStorage` limits with native **IndexedDB (`CyberDB`)**. Upload high-resolution screenshot galleries and logos stored permanently on your disk.
 - **📦 True ZIP Archive Backup & Universal Restore**:
-  - **Export (.zip)**: Bundles metadata (catalogs.json) and extracts all uploaded image Blobs into real .jpg/.png files in an /images/ subfolder.
-  - **Universal Import**: Drop either a .zip archive or .json file to restore your entire database seamlessly.
+  - **Export (`.zip`)**: Bundles metadata (`catalogs.json`) and extracts all uploaded image Blobs into real `.jpg`/`.png` files in an `/images/` subfolder.
+  - **Universal Import**: Drop either a `.zip` archive or `.json` file to restore your entire database seamlessly.
 - **🎛️ 4 Switchable View Modes**:
   - **Grid View**: Visual card matrix with tags, rating stars, and instant edit actions.
   - **Detailed View**: Expanded two-column layout showing multi-photo galleries and comprehensive notes.
   - **List View**: Dense tabular view for quick scanning and metadata comparison.
-  - **Kanban Board**: Drag-and-drop workflow pipeline (*To Explore*, *In Progress*, *Curated*, *Archived*) with independent column scrolling.
+  - **Kanban Board**: Workflow pipeline (*To Explore*, *In Progress*, *Curated*, *Archived*) with independent column scrolling.
+
+| Grid Gallery | Kanban Workflow |
+| :---: | :---: |
+| ![Grid View](Screenshots/curio-dashboard.png) | ![Kanban View](Screenshots/Kanban%20View.png) |
+
+| Detailed List | Edit & Curate Dialog |
+| :---: | :---: |
+| ![List View](Screenshots/List-view.png) | ![Edit View](Screenshots/Edit-view.png) |
+
 - **🏷️ Scoped Tag Cloud with Live Search**:
   - Contextual tag strip that adapts to the currently active drawer.
-  - Instant tag search box (Filter...) with expand/collapse view and item frequency badges.
-- **⌨️ Speed & Accessibility**: Full keyboard navigation (/ to focus search, N for new item, Esc to dismiss modals).
+  - Instant tag search box (`Filter...`) with expand/collapse view and item frequency badges.
+- **⌨️ Speed & Accessibility**: Full keyboard navigation (`/` to focus search, `N` for new item, `Esc` to dismiss modals).
 
 ---
 
