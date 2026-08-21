@@ -1,0 +1,2581 @@
+{
+  "version": "2.0",
+  "activeCatalogId": "catalog-creative",
+  "catalogs": [
+    {
+      "id": "catalog-creative",
+      "name": "Creative Software & Design Tools",
+      "drawers": [
+        "Photo Editing & RAW",
+        "Digital Art & Illustration",
+        "Vector & Graphic Design",
+        "Publishing & Layout",
+        "Photo Management & Viewers",
+        "Pixel Art & Animation",
+        "HDR, Panorama & AI Tools"
+      ],
+      "items": [
+        {
+          "id": "item-seed-5",
+          "title": "Darktable",
+          "drawer": "Photo Editing & RAW",
+          "status": "to-explore",
+          "tags": [
+            "free",
+            "open-source",
+            "raw-editor",
+            "lightroom-alternative",
+            "photography"
+          ],
+          "rating": 4,
+          "notes": "Free, open-source RAW editor with non-destructive editing and Lightroom-style workflow.",
+          "link": "https://www.darktable.org",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-6",
+          "title": "RawTherapee",
+          "drawer": "Photo Editing & RAW",
+          "status": "to-explore",
+          "tags": [
+            "free",
+            "open-source",
+            "raw-editor",
+            "color-grading",
+            "cross-platform"
+          ],
+          "rating": 4,
+          "notes": "Free, powerful non-destructive 32-bit RAW processor with a steep learning curve and granular demosaicing control.",
+          "link": "https://www.rawtherapee.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-7",
+          "title": "DxO PhotoLab",
+          "drawer": "Photo Editing & RAW",
+          "status": "to-explore",
+          "tags": [
+            "paid",
+            "raw-editor",
+            "noise-reduction",
+            "deep-prime",
+            "lens-correction"
+          ],
+          "rating": 5,
+          "notes": "Paid premium RAW editor known for class-leading DeepPRIME AI noise reduction and unmatched optical lens corrections.",
+          "link": "https://www.dxo.com/dxo-photolab/",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-8",
+          "title": "Luminar Neo",
+          "drawer": "Photo Editing & RAW",
+          "status": "to-explore",
+          "tags": [
+            "paid",
+            "ai-tools",
+            "photo-editor",
+            "sky-replacement",
+            "portrait"
+          ],
+          "rating": 4,
+          "notes": "Paid photo editor with AI-driven sky replacement, portrait relighting, powerline removal, and generative erase.",
+          "link": "https://skylum.com/luminar",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-9",
+          "title": "ON1 Photo RAW",
+          "drawer": "Photo Editing & RAW",
+          "status": "to-explore",
+          "tags": [
+            "paid",
+            "no-subscription",
+            "raw-editor",
+            "photo-organizer",
+            "effects"
+          ],
+          "rating": 4,
+          "notes": "Paid all-in-one RAW editor and asset manager with no subscription required; includes HDR, focus stacking, and AI masking.",
+          "link": "https://www.on1.com/products/photo-raw/",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-10",
+          "title": "Corel PaintShop Pro",
+          "drawer": "Photo Editing & RAW",
+          "status": "to-explore",
+          "tags": [
+            "paid",
+            "photoshop-alternative",
+            "raster",
+            "photo-editing",
+            "windows"
+          ],
+          "rating": 4,
+          "notes": "Paid comprehensive budget Photoshop alternative for Windows with raster/vector editing, layers, and AI upsampling.",
+          "link": "https://www.paintshoppro.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-11",
+          "title": "ACDSee Photo Studio",
+          "drawer": "Photo Editing & RAW",
+          "status": "to-explore",
+          "tags": [
+            "paid",
+            "dam",
+            "asset-management",
+            "raw-editor",
+            "batch-processing"
+          ],
+          "rating": 4,
+          "notes": "Paid hybrid digital asset management (DAM) and parametric RAW photo editor with fast batch processing capabilities.",
+          "link": "https://www.acdsee.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-12",
+          "title": "Skylum Aurora HDR",
+          "drawer": "Photo Editing & RAW",
+          "status": "to-explore",
+          "tags": [
+            "paid",
+            "hdr",
+            "tone-mapping",
+            "photo-merge",
+            "brackets"
+          ],
+          "rating": 4,
+          "notes": "Dedicated HDR merging and tone mapping software with bracket alignment, ghost reduction, and artistic presets.",
+          "link": "https://skylum.com/aurorahdr",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-13",
+          "title": "Polarr",
+          "drawer": "Photo Editing & RAW",
+          "status": "to-explore",
+          "tags": [
+            "freemium",
+            "browser",
+            "desktop",
+            "filters",
+            "color-grading"
+          ],
+          "rating": 4,
+          "notes": "Freemium browser and desktop photo editor packed with custom filter presets, face retouching, and selective adjustments.",
+          "link": "https://www.polarr.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-14",
+          "title": "Fotor",
+          "drawer": "Photo Editing & RAW",
+          "status": "to-explore",
+          "tags": [
+            "freemium",
+            "browser",
+            "templates",
+            "ai-enhancer",
+            "quick-edits"
+          ],
+          "rating": 3,
+          "notes": "Freemium online and desktop photo editor featuring 1-tap AI enhancements, design templates, and quick collage tools.",
+          "link": "https://www.fotor.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-15",
+          "title": "Pixlr E",
+          "drawer": "Photo Editing & RAW",
+          "status": "to-explore",
+          "tags": [
+            "free",
+            "browser",
+            "photoshop-alternative",
+            "layers",
+            "web-based"
+          ],
+          "rating": 4,
+          "notes": "Free browser-based photo editor with Photoshop-style layer hierarchy, blend modes, clone stamp, and selection tools.",
+          "link": "https://pixlr.com/e/",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-16",
+          "title": "PhotoDirector (CyberLink)",
+          "drawer": "Photo Editing & RAW",
+          "status": "to-explore",
+          "tags": [
+            "paid",
+            "photo-editing",
+            "light-video",
+            "ai-effects",
+            "animation"
+          ],
+          "rating": 3,
+          "notes": "Paid photo editing and animation suite combining RAW workflow, photo animation, AI sky replacement, and light video tools.",
+          "link": "https://www.cyberlink.com/products/photodirector-photo-editing-software/",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-17",
+          "title": "Capture One",
+          "drawer": "Photo Editing & RAW",
+          "status": "curated",
+          "tags": [
+            "paid",
+            "studio-standard",
+            "tethered-shooting",
+            "color-science",
+            "raw-editor"
+          ],
+          "rating": 5,
+          "notes": "Industry-standard pro RAW developer and tethering tool renowned for superior skin tone fidelity and color wheel controls.",
+          "link": "https://www.captureone.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-18",
+          "title": "Affinity Photo 2",
+          "drawer": "Photo Editing & RAW",
+          "status": "curated",
+          "tags": [
+            "paid",
+            "one-time",
+            "photoshop-alternative",
+            "raw",
+            "hdr",
+            "focus-merge"
+          ],
+          "rating": 5,
+          "notes": "High-performance one-time purchase photo editor with non-destructive live filters, full RAW development, and PSD compatibility.",
+          "link": "https://affinity.serif.com/photo/",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-19",
+          "title": "Adobe Photoshop",
+          "drawer": "Photo Editing & RAW",
+          "status": "curated",
+          "tags": [
+            "paid",
+            "subscription",
+            "industry-standard",
+            "generative-ai",
+            "raster"
+          ],
+          "rating": 5,
+          "notes": "The industry benchmark for raster image manipulation, compositing, graphic design, and Adobe Firefly generative AI.",
+          "link": "https://www.adobe.com/products/photoshop.html",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-20",
+          "title": "PhotoScape X",
+          "drawer": "Photo Editing & RAW",
+          "status": "to-explore",
+          "tags": [
+            "freemium",
+            "batch-editor",
+            "viewer",
+            "gif-maker",
+            "all-in-one"
+          ],
+          "rating": 4,
+          "notes": "All-in-one photo editing suite featuring batch resizing/renaming, collage creation, GIF maker, and film effect filters.",
+          "link": "http://x.photoscape.org",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-21",
+          "title": "Paint.NET",
+          "drawer": "Photo Editing & RAW",
+          "status": "curated",
+          "tags": [
+            "free",
+            "windows",
+            "lightweight",
+            "plugins",
+            "layers"
+          ],
+          "rating": 4,
+          "notes": "Fast, free Windows image editor supporting layers, unlimited undo, special effects, and a rich third-party plugin ecosystem.",
+          "link": "https://www.getpaint.net",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-22",
+          "title": "Photopea",
+          "drawer": "Photo Editing & RAW",
+          "status": "curated",
+          "tags": [
+            "free",
+            "browser",
+            "psd-compatible",
+            "web-based",
+            "offline-pwa"
+          ],
+          "rating": 5,
+          "notes": "Advanced free in-browser Photoshop clone that works offline with direct support for PSD, AI, XD, Sketch, and RAW formats.",
+          "link": "https://www.photopea.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-23",
+          "title": "GIMP",
+          "drawer": "Photo Editing & RAW",
+          "status": "curated",
+          "tags": [
+            "free",
+            "open-source",
+            "cross-platform",
+            "extensible",
+            "gegl"
+          ],
+          "rating": 4,
+          "notes": "GNU Image Manipulation Program — veteran open-source raster graphics editor powered by the GEGL image processing engine.",
+          "link": "https://www.gimp.org",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-24",
+          "title": "Krita",
+          "drawer": "Digital Art & Illustration",
+          "status": "curated",
+          "tags": [
+            "free",
+            "open-source",
+            "brush-engine",
+            "painting",
+            "2d-animation"
+          ],
+          "rating": 5,
+          "notes": "Premier free and open-source digital painting application with 100+ brush engines, brush stabilizers, and frame-by-frame 2D animation.",
+          "link": "https://krita.org",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-25",
+          "title": "Clip Studio Paint",
+          "drawer": "Digital Art & Illustration",
+          "status": "curated",
+          "tags": [
+            "paid",
+            "manga",
+            "comics",
+            "illustration",
+            "3d-models",
+            "animation"
+          ],
+          "rating": 5,
+          "notes": "Global industry standard for comics, manga, webtoons, and concept art with 3D poseable reference models and vector ink lines.",
+          "link": "https://www.clipstudio.net",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-26",
+          "title": "Corel Painter",
+          "drawer": "Digital Art & Illustration",
+          "status": "to-explore",
+          "tags": [
+            "paid",
+            "natural-media",
+            "thick-paint",
+            "canvas-texture",
+            "fine-art"
+          ],
+          "rating": 5,
+          "notes": "Best-in-class realistic digital art studio replicating oil paints, wet watercolors, chalk, pastels, and physical canvas textures.",
+          "link": "https://www.painterartist.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-27",
+          "title": "Rebelle 3",
+          "drawer": "Digital Art & Illustration",
+          "status": "to-explore",
+          "tags": [
+            "paid",
+            "hyper-realistic",
+            "watercolor-simulation",
+            "fluid-physics",
+            "oils"
+          ],
+          "rating": 5,
+          "notes": "Hyper-realistic fluid simulation software reproducing authentic real-world watercolor diffusion, drying, and impasto oils.",
+          "link": "https://www.escapemotions.com/products/rebelle/",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-28",
+          "title": "ArtRage",
+          "drawer": "Digital Art & Illustration",
+          "status": "to-explore",
+          "tags": [
+            "paid",
+            "intuitive",
+            "traditional-media",
+            "oils",
+            "paint-roller"
+          ],
+          "rating": 4,
+          "notes": "Tactile, beginner-friendly digital art package simulating thick oil paint blending, smear physics, and textured canvases.",
+          "link": "https://www.artrage.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-29",
+          "title": "PaintTool SAI",
+          "drawer": "Digital Art & Illustration",
+          "status": "to-explore",
+          "tags": [
+            "paid",
+            "lightweight",
+            "lineart",
+            "anime",
+            "low-latency"
+          ],
+          "rating": 4,
+          "notes": "Legendary ultra-lightweight Japanese painting software famed for silky smooth line stabilization, low CPU overhead, and clean anime rendering.",
+          "link": "https://www.systemax.jp/en/sai/",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-30",
+          "title": "Autodesk SketchBook",
+          "drawer": "Digital Art & Illustration",
+          "status": "curated",
+          "tags": [
+            "free",
+            "sketching",
+            "clean-ui",
+            "perspective-guides",
+            "copic"
+          ],
+          "rating": 4,
+          "notes": "Distraction-free sketching interface with customizable brushes, Copic color system, French curves, and perspective grids.",
+          "link": "https://www.sketchbook.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-31",
+          "title": "MyPaint",
+          "drawer": "Digital Art & Illustration",
+          "status": "to-explore",
+          "tags": [
+            "free",
+            "open-source",
+            "infinite-canvas",
+            "minimalist",
+            "libmypaint"
+          ],
+          "rating": 4,
+          "notes": "Minimalist, distraction-free digital painting tool with an infinite canvas and natural brush dynamics powered by libmypaint.",
+          "link": "http://mypaint.org",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-32",
+          "title": "MediBang Paint",
+          "drawer": "Digital Art & Illustration",
+          "status": "to-explore",
+          "tags": [
+            "free",
+            "manga",
+            "cloud-sync",
+            "comic-templates",
+            "cross-platform"
+          ],
+          "rating": 4,
+          "notes": "Free cross-platform digital painting and comic creation software loaded with 1000+ screentones, comic panel splitters, and cloud syncing.",
+          "link": "https://medibangpaint.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-33",
+          "title": "Inkscape",
+          "drawer": "Vector & Graphic Design",
+          "status": "curated",
+          "tags": [
+            "free",
+            "open-source",
+            "svg",
+            "vector-graphics",
+            "cross-platform"
+          ],
+          "rating": 4,
+          "notes": "Free, open-source vector graphics editor using W3C standard SVG natively, with robust node editing and path boolean operations.",
+          "link": "https://inkscape.org",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-34",
+          "title": "Affinity Designer 2",
+          "drawer": "Vector & Graphic Design",
+          "status": "curated",
+          "tags": [
+            "paid",
+            "one-time",
+            "vector",
+            "raster",
+            "ui-design",
+            "fast"
+          ],
+          "rating": 5,
+          "notes": "Fast one-time purchase vector design suite featuring seamless instant switching between vector and pixel raster personas.",
+          "link": "https://affinity.serif.com/designer/",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-35",
+          "title": "CorelDRAW",
+          "drawer": "Vector & Graphic Design",
+          "status": "to-explore",
+          "tags": [
+            "paid",
+            "veteran",
+            "print-ready",
+            "signmaking",
+            "vector"
+          ],
+          "rating": 4,
+          "notes": "Veteran vector illustration and layout software widely utilized in professional signmaking, apparel, and commercial print shops.",
+          "link": "https://www.coreldraw.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-36",
+          "title": "Gravit Designer",
+          "drawer": "Vector & Graphic Design",
+          "status": "to-explore",
+          "tags": [
+            "freemium",
+            "browser",
+            "desktop",
+            "ui-design",
+            "cloud-vector"
+          ],
+          "rating": 4,
+          "notes": "Full-featured vector design app running smoothly in both modern web browsers and desktop environments with cloud project storage.",
+          "link": "https://www.designer.io",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-37",
+          "title": "Boxy SVG",
+          "drawer": "Vector & Graphic Design",
+          "status": "to-explore",
+          "tags": [
+            "freemium",
+            "svg-standard",
+            "browser",
+            "clean-ui",
+            "web-design"
+          ],
+          "rating": 4,
+          "notes": "Clean, browser-based and desktop SVG editor with an uncluttered UI tailored for web designers and developers.",
+          "link": "https://boxy-svg.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-38",
+          "title": "Xara Designer Pro",
+          "drawer": "Vector & Graphic Design",
+          "status": "to-explore",
+          "tags": [
+            "paid",
+            "vector",
+            "layout",
+            "fast-rendering",
+            "dtp"
+          ],
+          "rating": 4,
+          "notes": "High-speed unified package combining vector illustration, DTP page layout, photo editing, and web graphics creation.",
+          "link": "https://www.xara.com/designer-pro/",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-39",
+          "title": "Adobe InDesign",
+          "drawer": "Publishing & Layout",
+          "status": "curated",
+          "tags": [
+            "paid",
+            "subscription",
+            "industry-standard",
+            "dtp",
+            "magazines",
+            "typography"
+          ],
+          "rating": 5,
+          "notes": "The industry-standard page design and layout application for books, digital magazines, flyers, interactive PDFs, and brochures.",
+          "link": "https://www.adobe.com/products/indesign.html",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-40",
+          "title": "QuarkXPress",
+          "drawer": "Publishing & Layout",
+          "status": "to-explore",
+          "tags": [
+            "paid",
+            "legacy-standard",
+            "dtp",
+            "print-production",
+            "publishing"
+          ],
+          "rating": 4,
+          "notes": "Pioneering desktop publishing and digital layout software with advanced typography control still heavily used in large print houses.",
+          "link": "https://www.quark.com/products/quarkxpress/",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-41",
+          "title": "Affinity Publisher 2",
+          "drawer": "Publishing & Layout",
+          "status": "curated",
+          "tags": [
+            "paid",
+            "one-time",
+            "indesign-alternative",
+            "studiosink",
+            "books"
+          ],
+          "rating": 5,
+          "notes": "Next-gen desktop publishing software with StudioLink integration allowing live editing with Photo and Designer without app switching.",
+          "link": "https://affinity.serif.com/publisher/",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-42",
+          "title": "Canva",
+          "drawer": "Publishing & Layout",
+          "status": "curated",
+          "tags": [
+            "freemium",
+            "browser",
+            "social-media",
+            "templates",
+            "collaborative"
+          ],
+          "rating": 4,
+          "notes": "Rapid in-browser graphic design and layout platform with tens of thousands of customizable drag-and-drop templates and team sharing.",
+          "link": "https://www.canva.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-43",
+          "title": "Lucidpress (Marq)",
+          "drawer": "Publishing & Layout",
+          "status": "to-explore",
+          "tags": [
+            "freemium",
+            "browser",
+            "brand-templating",
+            "marketing",
+            "collaboration"
+          ],
+          "rating": 4,
+          "notes": "Web-based brand templating and multi-channel publication platform with lockable design elements to keep collateral on-brand.",
+          "link": "https://www.marq.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-44",
+          "title": "LibreOffice Draw",
+          "drawer": "Publishing & Layout",
+          "status": "to-explore",
+          "tags": [
+            "free",
+            "open-source",
+            "diagramming",
+            "flowcharts",
+            "pdf-edit"
+          ],
+          "rating": 3,
+          "notes": "Free open-source vector drawing and basic page composition tool capable of editing PDFs, rendering flowcharts, and technical drawings.",
+          "link": "https://www.libreoffice.org/discover/draw/",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-45",
+          "title": "Blurb BookWright",
+          "drawer": "Publishing & Layout",
+          "status": "to-explore",
+          "tags": [
+            "free",
+            "book-publishing",
+            "photobooks",
+            "print-on-demand",
+            "isbn"
+          ],
+          "rating": 4,
+          "notes": "Free publishing software built explicitly for formatting photo books, trade books, magazines, and e-books for on-demand print.",
+          "link": "https://www.blurb.com/bookwright",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-46",
+          "title": "Scribus",
+          "drawer": "Publishing & Layout",
+          "status": "to-explore",
+          "tags": [
+            "free",
+            "open-source",
+            "cmyk",
+            "icc-profiles",
+            "dtp",
+            "pdf-x"
+          ],
+          "rating": 4,
+          "notes": "Open-source desktop publishing application featuring professional color management (CMYK, ICC profiles, spot colors) and PDF/X-3 export.",
+          "link": "https://www.scribus.net",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-47",
+          "title": "digiKam",
+          "drawer": "Photo Management & Viewers",
+          "status": "curated",
+          "tags": [
+            "free",
+            "open-source",
+            "dam",
+            "geotagging",
+            "face-recognition",
+            "sqlite"
+          ],
+          "rating": 5,
+          "notes": "Comprehensive open-source digital asset management system with facial recognition, auto-tagging, geotagging, and RAW processing.",
+          "link": "https://www.digikam.org",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-48",
+          "title": "XnView MP",
+          "drawer": "Photo Management & Viewers",
+          "status": "curated",
+          "tags": [
+            "free",
+            "lightweight",
+            "batch-converter",
+            "500-formats",
+            "viewer"
+          ],
+          "rating": 5,
+          "notes": "Versatile, lightning-fast image viewer, cataloguer, and batch converter with support for over 500 graphic file formats.",
+          "link": "https://www.xnview.com/en/xnviewmp/",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-49",
+          "title": "FastStone Image Viewer",
+          "drawer": "Photo Management & Viewers",
+          "status": "curated",
+          "tags": [
+            "free",
+            "windows",
+            "ultra-light",
+            "slideshow",
+            "image-comparison"
+          ],
+          "rating": 4,
+          "notes": "Extremely fast, lightweight Windows image browser and viewer with side-by-side photo comparison, crop board, and full-screen preview.",
+          "link": "https://www.faststone.org",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-50",
+          "title": "IrfanView",
+          "drawer": "Photo Management & Viewers",
+          "status": "curated",
+          "tags": [
+            "free",
+            "classic",
+            "windows",
+            "ultra-fast",
+            "batch-scan"
+          ],
+          "rating": 4,
+          "notes": "Legendary ultra-compact Windows graphic viewer designed to be fast, simple, and capable of handling enormous batch actions and plugins.",
+          "link": "https://www.irfanview.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-51",
+          "title": "Adobe Bridge",
+          "drawer": "Photo Management & Viewers",
+          "status": "curated",
+          "tags": [
+            "free",
+            "asset-organizer",
+            "adobe-ecosystem",
+            "metadata",
+            "batch-rename"
+          ],
+          "rating": 4,
+          "notes": "Powerful creative asset manager from Adobe allowing batch renaming, metadata tagging, rating, and Adobe Camera Raw previews without launch.",
+          "link": "https://www.adobe.com/products/bridge.html",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-52",
+          "title": "Zoner Photo Studio",
+          "drawer": "Photo Management & Viewers",
+          "status": "to-explore",
+          "tags": [
+            "paid",
+            "all-in-one",
+            "dam",
+            "video-editor",
+            "raw"
+          ],
+          "rating": 4,
+          "notes": "All-in-one photo workflow software for Windows providing DAM cataloging, RAW processing, layer-based editing, and basic video cutting.",
+          "link": "https://www.zoner.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-53",
+          "title": "Photo Mechanic",
+          "drawer": "Photo Management & Viewers",
+          "status": "curated",
+          "tags": [
+            "paid",
+            "photojournalism",
+            "superfast-culling",
+            "iptc-metadata",
+            "ingest"
+          ],
+          "rating": 5,
+          "notes": "The industry-fastest culling, tagging, and ingestion tool used worldwide by sports photographers, photojournalists, and agencies.",
+          "link": "https://home.camerabits.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-54",
+          "title": "Aseprite",
+          "drawer": "Pixel Art & Animation",
+          "status": "curated",
+          "tags": [
+            "paid",
+            "industry-standard",
+            "pixel-art",
+            "sprites",
+            "onion-skinning",
+            "tileset"
+          ],
+          "rating": 5,
+          "notes": "The premier animated sprite editor and pixel art tool featuring onion skinning, tileset modes, palette swaps, and CLI export.",
+          "link": "https://www.aseprite.org",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-55",
+          "title": "GraphicsGale",
+          "drawer": "Pixel Art & Animation",
+          "status": "to-explore",
+          "tags": [
+            "free",
+            "pixel-art",
+            "retro-animation",
+            "sprite-sheet",
+            "windows"
+          ],
+          "rating": 4,
+          "notes": "Classic freeware animation and pixel graphics editor tailored for spriting, frame control, AVI/GIF output, and onion skinning.",
+          "link": "https://graphicsgale.com/us/",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-56",
+          "title": "Piskel",
+          "drawer": "Pixel Art & Animation",
+          "status": "to-explore",
+          "tags": [
+            "free",
+            "browser",
+            "pixel-art",
+            "gif-sprites",
+            "open-source"
+          ],
+          "rating": 4,
+          "notes": "Free online animated sprite and pixel art editor with live preview, frame management, and easy export to animated GIF or spritesheet.",
+          "link": "https://www.piskelapp.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-57",
+          "title": "Pixelorama",
+          "drawer": "Pixel Art & Animation",
+          "status": "curated",
+          "tags": [
+            "free",
+            "open-source",
+            "godot-powered",
+            "pixel-art",
+            "animation"
+          ],
+          "rating": 5,
+          "notes": "Free and open-source pixel art and sprite animator built with the Godot Engine, featuring custom brushes, 3D layers, and timeline controls.",
+          "link": "https://orama-interactive.itch.io/pixelorama",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-58",
+          "title": "Hugin",
+          "drawer": "HDR, Panorama & AI Tools",
+          "status": "curated",
+          "tags": [
+            "free",
+            "open-source",
+            "panorama-stitcher",
+            "hdr",
+            "control-points"
+          ],
+          "rating": 4,
+          "notes": "Open-source panorama photo stitcher and multi-row spherical image compositor based on the Panorama Tools library.",
+          "link": "https://hugin.sourceforge.io",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-59",
+          "title": "PTGui",
+          "drawer": "HDR, Panorama & AI Tools",
+          "status": "curated",
+          "tags": [
+            "paid",
+            "spherical-panoramas",
+            "gigapixel",
+            "gpu-acceleration",
+            "hdr"
+          ],
+          "rating": 5,
+          "notes": "Gold-standard professional panorama stitching software with GPU acceleration, handling spherical 360x180 VR and gigapixel panoramas.",
+          "link": "https://ptgui.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-60",
+          "title": "Nik Collection (DxO)",
+          "drawer": "HDR, Panorama & AI Tools",
+          "status": "curated",
+          "tags": [
+            "paid",
+            "photoshop-plugin",
+            "silver-efex",
+            "color-efex",
+            "u-point"
+          ],
+          "rating": 5,
+          "notes": "Acclaimed suite of 8 photographic plugins (Silver Efex Pro, Color Efex Pro, Analog Efex, Viveza, Dfine) featuring U Point local adjustments.",
+          "link": "https://nikcollection.dxo.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-61",
+          "title": "Topaz Photo AI",
+          "drawer": "HDR, Panorama & AI Tools",
+          "status": "curated",
+          "tags": [
+            "paid",
+            "ai-upscaler",
+            "denoise",
+            "sharpening",
+            "autopilot"
+          ],
+          "rating": 5,
+          "notes": "Integrated AI-powered image enhancement suite combining neural upscaling, RAW noise reduction, motion blur repair, and face recovery.",
+          "link": "https://www.topazlabs.com/topaz-photo-ai",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-62",
+          "title": "Topaz Gigapixel AI",
+          "drawer": "HDR, Panorama & AI Tools",
+          "status": "curated",
+          "tags": [
+            "paid",
+            "ai-upscaling",
+            "super-resolution",
+            "print-enlargement",
+            "600-percent"
+          ],
+          "rating": 5,
+          "notes": "Dedicated standalone AI image upscaler capable of enlarging photos and textures up to 600% while synthesizing realistic detail.",
+          "link": "https://www.topazlabs.com/gigapixel-ai",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-63",
+          "title": "Affinity Photo Develop Persona Plugins",
+          "drawer": "HDR, Panorama & AI Tools",
+          "status": "to-explore",
+          "tags": [
+            "free",
+            "plugins",
+            "raw-workflow",
+            "affinity-ecosystem",
+            "macros"
+          ],
+          "rating": 4,
+          "notes": "Macro packs, LUTs, and third-party plugin ecosystem designed for RAW development and non-destructive studio workflows in Affinity Photo 2.",
+          "link": "https://affinity.serif.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "catalog-gamedev",
+      "name": "Game Dev & Tech Art",
+      "drawers": [
+        "Game Design & Engines",
+        "Shaders & Tech Art",
+        "Audio & Soundtracks",
+        "Reference & Docs"
+      ],
+      "items": [
+        {
+          "id": "item-seed-1",
+          "title": "Godot Engine 4.3",
+          "drawer": "Game Design & Engines",
+          "status": "curated",
+          "tags": [
+            "engine",
+            "open-source",
+            "2d",
+            "3d",
+            "gdscript"
+          ],
+          "rating": 5,
+          "notes": "Feature-packed, multi-platform 2D and 3D open-source game engine. Amazing node system and lightweight footprint.",
+          "link": "https://godotengine.org",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-09T15:00:00.000Z",
+          "dateModified": "2026-08-19T15:00:00.000Z"
+        },
+        {
+          "id": "item-seed-2",
+          "title": "Raymarching Signed Distance Fields",
+          "drawer": "Shaders & Tech Art",
+          "status": "in-progress",
+          "tags": [
+            "shader",
+            "glsl",
+            "math",
+            "graphics"
+          ],
+          "rating": 4,
+          "notes": "Inigo Quilez distance functions cheatsheet and volumetric rendering algorithms. Perfect for procedural organic visuals.",
+          "link": "https://iquilezles.org/articles/distfunctions/",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-14T15:00:00.000Z",
+          "dateModified": "2026-08-20T15:00:00.000Z"
+        },
+        {
+          "id": "item-seed-3",
+          "title": "Synthwave / Cyberpunk OST Collection",
+          "drawer": "Audio & Soundtracks",
+          "status": "to-explore",
+          "tags": [
+            "audio",
+            "music",
+            "retro",
+            "synth"
+          ],
+          "rating": 5,
+          "notes": "Heavy analog synth basslines, drum machines, and atmospheric neon pads suitable for retro sci-fi projects.",
+          "link": "https://bandcamp.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-18T15:00:00.000Z",
+          "dateModified": "2026-08-18T15:00:00.000Z"
+        },
+        {
+          "id": "item-seed-4",
+          "title": "Game Programming Patterns by Robert Nystrom",
+          "drawer": "Reference & Docs",
+          "status": "curated",
+          "tags": [
+            "books",
+            "architecture",
+            "c++",
+            "patterns"
+          ],
+          "rating": 5,
+          "notes": "Comprehensive architectural patterns for game loops, component systems, state machines, and spatial partitioning.",
+          "link": "https://gameprogrammingpatterns.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-01T15:00:00.000Z",
+          "dateModified": "2026-08-11T15:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "catalog-full",
+      "name": "Full Combined Library",
+      "drawers": [
+        "Game Design & Engines",
+        "Shaders & Tech Art",
+        "Audio & Soundtracks",
+        "Reference & Docs",
+        "Photo Editing & RAW",
+        "Digital Art & Illustration",
+        "Vector & Graphic Design",
+        "Publishing & Layout",
+        "Photo Management & Viewers",
+        "Pixel Art & Animation",
+        "HDR, Panorama & AI Tools"
+      ],
+      "items": [
+        {
+          "id": "item-seed-1",
+          "title": "Godot Engine 4.3",
+          "drawer": "Game Design & Engines",
+          "status": "curated",
+          "tags": [
+            "engine",
+            "open-source",
+            "2d",
+            "3d",
+            "gdscript"
+          ],
+          "rating": 5,
+          "notes": "Feature-packed, multi-platform 2D and 3D open-source game engine. Amazing node system and lightweight footprint.",
+          "link": "https://godotengine.org",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-09T15:00:00.000Z",
+          "dateModified": "2026-08-19T15:00:00.000Z"
+        },
+        {
+          "id": "item-seed-2",
+          "title": "Raymarching Signed Distance Fields",
+          "drawer": "Shaders & Tech Art",
+          "status": "in-progress",
+          "tags": [
+            "shader",
+            "glsl",
+            "math",
+            "graphics"
+          ],
+          "rating": 4,
+          "notes": "Inigo Quilez distance functions cheatsheet and volumetric rendering algorithms. Perfect for procedural organic visuals.",
+          "link": "https://iquilezles.org/articles/distfunctions/",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-14T15:00:00.000Z",
+          "dateModified": "2026-08-20T15:00:00.000Z"
+        },
+        {
+          "id": "item-seed-3",
+          "title": "Synthwave / Cyberpunk OST Collection",
+          "drawer": "Audio & Soundtracks",
+          "status": "to-explore",
+          "tags": [
+            "audio",
+            "music",
+            "retro",
+            "synth"
+          ],
+          "rating": 5,
+          "notes": "Heavy analog synth basslines, drum machines, and atmospheric neon pads suitable for retro sci-fi projects.",
+          "link": "https://bandcamp.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-18T15:00:00.000Z",
+          "dateModified": "2026-08-18T15:00:00.000Z"
+        },
+        {
+          "id": "item-seed-4",
+          "title": "Game Programming Patterns by Robert Nystrom",
+          "drawer": "Reference & Docs",
+          "status": "curated",
+          "tags": [
+            "books",
+            "architecture",
+            "c++",
+            "patterns"
+          ],
+          "rating": 5,
+          "notes": "Comprehensive architectural patterns for game loops, component systems, state machines, and spatial partitioning.",
+          "link": "https://gameprogrammingpatterns.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-01T15:00:00.000Z",
+          "dateModified": "2026-08-11T15:00:00.000Z"
+        },
+        {
+          "id": "item-seed-5",
+          "title": "Darktable",
+          "drawer": "Photo Editing & RAW",
+          "status": "to-explore",
+          "tags": [
+            "free",
+            "open-source",
+            "raw-editor",
+            "lightroom-alternative",
+            "photography"
+          ],
+          "rating": 4,
+          "notes": "Free, open-source RAW editor with non-destructive editing and Lightroom-style workflow.",
+          "link": "https://www.darktable.org",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-6",
+          "title": "RawTherapee",
+          "drawer": "Photo Editing & RAW",
+          "status": "to-explore",
+          "tags": [
+            "free",
+            "open-source",
+            "raw-editor",
+            "color-grading",
+            "cross-platform"
+          ],
+          "rating": 4,
+          "notes": "Free, powerful non-destructive 32-bit RAW processor with a steep learning curve and granular demosaicing control.",
+          "link": "https://www.rawtherapee.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-7",
+          "title": "DxO PhotoLab",
+          "drawer": "Photo Editing & RAW",
+          "status": "to-explore",
+          "tags": [
+            "paid",
+            "raw-editor",
+            "noise-reduction",
+            "deep-prime",
+            "lens-correction"
+          ],
+          "rating": 5,
+          "notes": "Paid premium RAW editor known for class-leading DeepPRIME AI noise reduction and unmatched optical lens corrections.",
+          "link": "https://www.dxo.com/dxo-photolab/",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-8",
+          "title": "Luminar Neo",
+          "drawer": "Photo Editing & RAW",
+          "status": "to-explore",
+          "tags": [
+            "paid",
+            "ai-tools",
+            "photo-editor",
+            "sky-replacement",
+            "portrait"
+          ],
+          "rating": 4,
+          "notes": "Paid photo editor with AI-driven sky replacement, portrait relighting, powerline removal, and generative erase.",
+          "link": "https://skylum.com/luminar",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-9",
+          "title": "ON1 Photo RAW",
+          "drawer": "Photo Editing & RAW",
+          "status": "to-explore",
+          "tags": [
+            "paid",
+            "no-subscription",
+            "raw-editor",
+            "photo-organizer",
+            "effects"
+          ],
+          "rating": 4,
+          "notes": "Paid all-in-one RAW editor and asset manager with no subscription required; includes HDR, focus stacking, and AI masking.",
+          "link": "https://www.on1.com/products/photo-raw/",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-10",
+          "title": "Corel PaintShop Pro",
+          "drawer": "Photo Editing & RAW",
+          "status": "to-explore",
+          "tags": [
+            "paid",
+            "photoshop-alternative",
+            "raster",
+            "photo-editing",
+            "windows"
+          ],
+          "rating": 4,
+          "notes": "Paid comprehensive budget Photoshop alternative for Windows with raster/vector editing, layers, and AI upsampling.",
+          "link": "https://www.paintshoppro.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-11",
+          "title": "ACDSee Photo Studio",
+          "drawer": "Photo Editing & RAW",
+          "status": "to-explore",
+          "tags": [
+            "paid",
+            "dam",
+            "asset-management",
+            "raw-editor",
+            "batch-processing"
+          ],
+          "rating": 4,
+          "notes": "Paid hybrid digital asset management (DAM) and parametric RAW photo editor with fast batch processing capabilities.",
+          "link": "https://www.acdsee.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-12",
+          "title": "Skylum Aurora HDR",
+          "drawer": "Photo Editing & RAW",
+          "status": "to-explore",
+          "tags": [
+            "paid",
+            "hdr",
+            "tone-mapping",
+            "photo-merge",
+            "brackets"
+          ],
+          "rating": 4,
+          "notes": "Dedicated HDR merging and tone mapping software with bracket alignment, ghost reduction, and artistic presets.",
+          "link": "https://skylum.com/aurorahdr",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-13",
+          "title": "Polarr",
+          "drawer": "Photo Editing & RAW",
+          "status": "to-explore",
+          "tags": [
+            "freemium",
+            "browser",
+            "desktop",
+            "filters",
+            "color-grading"
+          ],
+          "rating": 4,
+          "notes": "Freemium browser and desktop photo editor packed with custom filter presets, face retouching, and selective adjustments.",
+          "link": "https://www.polarr.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-14",
+          "title": "Fotor",
+          "drawer": "Photo Editing & RAW",
+          "status": "to-explore",
+          "tags": [
+            "freemium",
+            "browser",
+            "templates",
+            "ai-enhancer",
+            "quick-edits"
+          ],
+          "rating": 3,
+          "notes": "Freemium online and desktop photo editor featuring 1-tap AI enhancements, design templates, and quick collage tools.",
+          "link": "https://www.fotor.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-15",
+          "title": "Pixlr E",
+          "drawer": "Photo Editing & RAW",
+          "status": "to-explore",
+          "tags": [
+            "free",
+            "browser",
+            "photoshop-alternative",
+            "layers",
+            "web-based"
+          ],
+          "rating": 4,
+          "notes": "Free browser-based photo editor with Photoshop-style layer hierarchy, blend modes, clone stamp, and selection tools.",
+          "link": "https://pixlr.com/e/",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-16",
+          "title": "PhotoDirector (CyberLink)",
+          "drawer": "Photo Editing & RAW",
+          "status": "to-explore",
+          "tags": [
+            "paid",
+            "photo-editing",
+            "light-video",
+            "ai-effects",
+            "animation"
+          ],
+          "rating": 3,
+          "notes": "Paid photo editing and animation suite combining RAW workflow, photo animation, AI sky replacement, and light video tools.",
+          "link": "https://www.cyberlink.com/products/photodirector-photo-editing-software/",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-17",
+          "title": "Capture One",
+          "drawer": "Photo Editing & RAW",
+          "status": "curated",
+          "tags": [
+            "paid",
+            "studio-standard",
+            "tethered-shooting",
+            "color-science",
+            "raw-editor"
+          ],
+          "rating": 5,
+          "notes": "Industry-standard pro RAW developer and tethering tool renowned for superior skin tone fidelity and color wheel controls.",
+          "link": "https://www.captureone.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-18",
+          "title": "Affinity Photo 2",
+          "drawer": "Photo Editing & RAW",
+          "status": "curated",
+          "tags": [
+            "paid",
+            "one-time",
+            "photoshop-alternative",
+            "raw",
+            "hdr",
+            "focus-merge"
+          ],
+          "rating": 5,
+          "notes": "High-performance one-time purchase photo editor with non-destructive live filters, full RAW development, and PSD compatibility.",
+          "link": "https://affinity.serif.com/photo/",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-19",
+          "title": "Adobe Photoshop",
+          "drawer": "Photo Editing & RAW",
+          "status": "curated",
+          "tags": [
+            "paid",
+            "subscription",
+            "industry-standard",
+            "generative-ai",
+            "raster"
+          ],
+          "rating": 5,
+          "notes": "The industry benchmark for raster image manipulation, compositing, graphic design, and Adobe Firefly generative AI.",
+          "link": "https://www.adobe.com/products/photoshop.html",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-20",
+          "title": "PhotoScape X",
+          "drawer": "Photo Editing & RAW",
+          "status": "to-explore",
+          "tags": [
+            "freemium",
+            "batch-editor",
+            "viewer",
+            "gif-maker",
+            "all-in-one"
+          ],
+          "rating": 4,
+          "notes": "All-in-one photo editing suite featuring batch resizing/renaming, collage creation, GIF maker, and film effect filters.",
+          "link": "http://x.photoscape.org",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-21",
+          "title": "Paint.NET",
+          "drawer": "Photo Editing & RAW",
+          "status": "curated",
+          "tags": [
+            "free",
+            "windows",
+            "lightweight",
+            "plugins",
+            "layers"
+          ],
+          "rating": 4,
+          "notes": "Fast, free Windows image editor supporting layers, unlimited undo, special effects, and a rich third-party plugin ecosystem.",
+          "link": "https://www.getpaint.net",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-22",
+          "title": "Photopea",
+          "drawer": "Photo Editing & RAW",
+          "status": "curated",
+          "tags": [
+            "free",
+            "browser",
+            "psd-compatible",
+            "web-based",
+            "offline-pwa"
+          ],
+          "rating": 5,
+          "notes": "Advanced free in-browser Photoshop clone that works offline with direct support for PSD, AI, XD, Sketch, and RAW formats.",
+          "link": "https://www.photopea.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-23",
+          "title": "GIMP",
+          "drawer": "Photo Editing & RAW",
+          "status": "curated",
+          "tags": [
+            "free",
+            "open-source",
+            "cross-platform",
+            "extensible",
+            "gegl"
+          ],
+          "rating": 4,
+          "notes": "GNU Image Manipulation Program — veteran open-source raster graphics editor powered by the GEGL image processing engine.",
+          "link": "https://www.gimp.org",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-24",
+          "title": "Krita",
+          "drawer": "Digital Art & Illustration",
+          "status": "curated",
+          "tags": [
+            "free",
+            "open-source",
+            "brush-engine",
+            "painting",
+            "2d-animation"
+          ],
+          "rating": 5,
+          "notes": "Premier free and open-source digital painting application with 100+ brush engines, brush stabilizers, and frame-by-frame 2D animation.",
+          "link": "https://krita.org",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-25",
+          "title": "Clip Studio Paint",
+          "drawer": "Digital Art & Illustration",
+          "status": "curated",
+          "tags": [
+            "paid",
+            "manga",
+            "comics",
+            "illustration",
+            "3d-models",
+            "animation"
+          ],
+          "rating": 5,
+          "notes": "Global industry standard for comics, manga, webtoons, and concept art with 3D poseable reference models and vector ink lines.",
+          "link": "https://www.clipstudio.net",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-26",
+          "title": "Corel Painter",
+          "drawer": "Digital Art & Illustration",
+          "status": "to-explore",
+          "tags": [
+            "paid",
+            "natural-media",
+            "thick-paint",
+            "canvas-texture",
+            "fine-art"
+          ],
+          "rating": 5,
+          "notes": "Best-in-class realistic digital art studio replicating oil paints, wet watercolors, chalk, pastels, and physical canvas textures.",
+          "link": "https://www.painterartist.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-27",
+          "title": "Rebelle 3",
+          "drawer": "Digital Art & Illustration",
+          "status": "to-explore",
+          "tags": [
+            "paid",
+            "hyper-realistic",
+            "watercolor-simulation",
+            "fluid-physics",
+            "oils"
+          ],
+          "rating": 5,
+          "notes": "Hyper-realistic fluid simulation software reproducing authentic real-world watercolor diffusion, drying, and impasto oils.",
+          "link": "https://www.escapemotions.com/products/rebelle/",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-28",
+          "title": "ArtRage",
+          "drawer": "Digital Art & Illustration",
+          "status": "to-explore",
+          "tags": [
+            "paid",
+            "intuitive",
+            "traditional-media",
+            "oils",
+            "paint-roller"
+          ],
+          "rating": 4,
+          "notes": "Tactile, beginner-friendly digital art package simulating thick oil paint blending, smear physics, and textured canvases.",
+          "link": "https://www.artrage.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-29",
+          "title": "PaintTool SAI",
+          "drawer": "Digital Art & Illustration",
+          "status": "to-explore",
+          "tags": [
+            "paid",
+            "lightweight",
+            "lineart",
+            "anime",
+            "low-latency"
+          ],
+          "rating": 4,
+          "notes": "Legendary ultra-lightweight Japanese painting software famed for silky smooth line stabilization, low CPU overhead, and clean anime rendering.",
+          "link": "https://www.systemax.jp/en/sai/",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-30",
+          "title": "Autodesk SketchBook",
+          "drawer": "Digital Art & Illustration",
+          "status": "curated",
+          "tags": [
+            "free",
+            "sketching",
+            "clean-ui",
+            "perspective-guides",
+            "copic"
+          ],
+          "rating": 4,
+          "notes": "Distraction-free sketching interface with customizable brushes, Copic color system, French curves, and perspective grids.",
+          "link": "https://www.sketchbook.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-31",
+          "title": "MyPaint",
+          "drawer": "Digital Art & Illustration",
+          "status": "to-explore",
+          "tags": [
+            "free",
+            "open-source",
+            "infinite-canvas",
+            "minimalist",
+            "libmypaint"
+          ],
+          "rating": 4,
+          "notes": "Minimalist, distraction-free digital painting tool with an infinite canvas and natural brush dynamics powered by libmypaint.",
+          "link": "http://mypaint.org",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-32",
+          "title": "MediBang Paint",
+          "drawer": "Digital Art & Illustration",
+          "status": "to-explore",
+          "tags": [
+            "free",
+            "manga",
+            "cloud-sync",
+            "comic-templates",
+            "cross-platform"
+          ],
+          "rating": 4,
+          "notes": "Free cross-platform digital painting and comic creation software loaded with 1000+ screentones, comic panel splitters, and cloud syncing.",
+          "link": "https://medibangpaint.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-33",
+          "title": "Inkscape",
+          "drawer": "Vector & Graphic Design",
+          "status": "curated",
+          "tags": [
+            "free",
+            "open-source",
+            "svg",
+            "vector-graphics",
+            "cross-platform"
+          ],
+          "rating": 4,
+          "notes": "Free, open-source vector graphics editor using W3C standard SVG natively, with robust node editing and path boolean operations.",
+          "link": "https://inkscape.org",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-34",
+          "title": "Affinity Designer 2",
+          "drawer": "Vector & Graphic Design",
+          "status": "curated",
+          "tags": [
+            "paid",
+            "one-time",
+            "vector",
+            "raster",
+            "ui-design",
+            "fast"
+          ],
+          "rating": 5,
+          "notes": "Fast one-time purchase vector design suite featuring seamless instant switching between vector and pixel raster personas.",
+          "link": "https://affinity.serif.com/designer/",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-35",
+          "title": "CorelDRAW",
+          "drawer": "Vector & Graphic Design",
+          "status": "to-explore",
+          "tags": [
+            "paid",
+            "veteran",
+            "print-ready",
+            "signmaking",
+            "vector"
+          ],
+          "rating": 4,
+          "notes": "Veteran vector illustration and layout software widely utilized in professional signmaking, apparel, and commercial print shops.",
+          "link": "https://www.coreldraw.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-36",
+          "title": "Gravit Designer",
+          "drawer": "Vector & Graphic Design",
+          "status": "to-explore",
+          "tags": [
+            "freemium",
+            "browser",
+            "desktop",
+            "ui-design",
+            "cloud-vector"
+          ],
+          "rating": 4,
+          "notes": "Full-featured vector design app running smoothly in both modern web browsers and desktop environments with cloud project storage.",
+          "link": "https://www.designer.io",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-37",
+          "title": "Boxy SVG",
+          "drawer": "Vector & Graphic Design",
+          "status": "to-explore",
+          "tags": [
+            "freemium",
+            "svg-standard",
+            "browser",
+            "clean-ui",
+            "web-design"
+          ],
+          "rating": 4,
+          "notes": "Clean, browser-based and desktop SVG editor with an uncluttered UI tailored for web designers and developers.",
+          "link": "https://boxy-svg.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-38",
+          "title": "Xara Designer Pro",
+          "drawer": "Vector & Graphic Design",
+          "status": "to-explore",
+          "tags": [
+            "paid",
+            "vector",
+            "layout",
+            "fast-rendering",
+            "dtp"
+          ],
+          "rating": 4,
+          "notes": "High-speed unified package combining vector illustration, DTP page layout, photo editing, and web graphics creation.",
+          "link": "https://www.xara.com/designer-pro/",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-39",
+          "title": "Adobe InDesign",
+          "drawer": "Publishing & Layout",
+          "status": "curated",
+          "tags": [
+            "paid",
+            "subscription",
+            "industry-standard",
+            "dtp",
+            "magazines",
+            "typography"
+          ],
+          "rating": 5,
+          "notes": "The industry-standard page design and layout application for books, digital magazines, flyers, interactive PDFs, and brochures.",
+          "link": "https://www.adobe.com/products/indesign.html",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-40",
+          "title": "QuarkXPress",
+          "drawer": "Publishing & Layout",
+          "status": "to-explore",
+          "tags": [
+            "paid",
+            "legacy-standard",
+            "dtp",
+            "print-production",
+            "publishing"
+          ],
+          "rating": 4,
+          "notes": "Pioneering desktop publishing and digital layout software with advanced typography control still heavily used in large print houses.",
+          "link": "https://www.quark.com/products/quarkxpress/",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-41",
+          "title": "Affinity Publisher 2",
+          "drawer": "Publishing & Layout",
+          "status": "curated",
+          "tags": [
+            "paid",
+            "one-time",
+            "indesign-alternative",
+            "studiosink",
+            "books"
+          ],
+          "rating": 5,
+          "notes": "Next-gen desktop publishing software with StudioLink integration allowing live editing with Photo and Designer without app switching.",
+          "link": "https://affinity.serif.com/publisher/",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-42",
+          "title": "Canva",
+          "drawer": "Publishing & Layout",
+          "status": "curated",
+          "tags": [
+            "freemium",
+            "browser",
+            "social-media",
+            "templates",
+            "collaborative"
+          ],
+          "rating": 4,
+          "notes": "Rapid in-browser graphic design and layout platform with tens of thousands of customizable drag-and-drop templates and team sharing.",
+          "link": "https://www.canva.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-43",
+          "title": "Lucidpress (Marq)",
+          "drawer": "Publishing & Layout",
+          "status": "to-explore",
+          "tags": [
+            "freemium",
+            "browser",
+            "brand-templating",
+            "marketing",
+            "collaboration"
+          ],
+          "rating": 4,
+          "notes": "Web-based brand templating and multi-channel publication platform with lockable design elements to keep collateral on-brand.",
+          "link": "https://www.marq.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-44",
+          "title": "LibreOffice Draw",
+          "drawer": "Publishing & Layout",
+          "status": "to-explore",
+          "tags": [
+            "free",
+            "open-source",
+            "diagramming",
+            "flowcharts",
+            "pdf-edit"
+          ],
+          "rating": 3,
+          "notes": "Free open-source vector drawing and basic page composition tool capable of editing PDFs, rendering flowcharts, and technical drawings.",
+          "link": "https://www.libreoffice.org/discover/draw/",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-45",
+          "title": "Blurb BookWright",
+          "drawer": "Publishing & Layout",
+          "status": "to-explore",
+          "tags": [
+            "free",
+            "book-publishing",
+            "photobooks",
+            "print-on-demand",
+            "isbn"
+          ],
+          "rating": 4,
+          "notes": "Free publishing software built explicitly for formatting photo books, trade books, magazines, and e-books for on-demand print.",
+          "link": "https://www.blurb.com/bookwright",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-46",
+          "title": "Scribus",
+          "drawer": "Publishing & Layout",
+          "status": "to-explore",
+          "tags": [
+            "free",
+            "open-source",
+            "cmyk",
+            "icc-profiles",
+            "dtp",
+            "pdf-x"
+          ],
+          "rating": 4,
+          "notes": "Open-source desktop publishing application featuring professional color management (CMYK, ICC profiles, spot colors) and PDF/X-3 export.",
+          "link": "https://www.scribus.net",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-47",
+          "title": "digiKam",
+          "drawer": "Photo Management & Viewers",
+          "status": "curated",
+          "tags": [
+            "free",
+            "open-source",
+            "dam",
+            "geotagging",
+            "face-recognition",
+            "sqlite"
+          ],
+          "rating": 5,
+          "notes": "Comprehensive open-source digital asset management system with facial recognition, auto-tagging, geotagging, and RAW processing.",
+          "link": "https://www.digikam.org",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-48",
+          "title": "XnView MP",
+          "drawer": "Photo Management & Viewers",
+          "status": "curated",
+          "tags": [
+            "free",
+            "lightweight",
+            "batch-converter",
+            "500-formats",
+            "viewer"
+          ],
+          "rating": 5,
+          "notes": "Versatile, lightning-fast image viewer, cataloguer, and batch converter with support for over 500 graphic file formats.",
+          "link": "https://www.xnview.com/en/xnviewmp/",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-49",
+          "title": "FastStone Image Viewer",
+          "drawer": "Photo Management & Viewers",
+          "status": "curated",
+          "tags": [
+            "free",
+            "windows",
+            "ultra-light",
+            "slideshow",
+            "image-comparison"
+          ],
+          "rating": 4,
+          "notes": "Extremely fast, lightweight Windows image browser and viewer with side-by-side photo comparison, crop board, and full-screen preview.",
+          "link": "https://www.faststone.org",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-50",
+          "title": "IrfanView",
+          "drawer": "Photo Management & Viewers",
+          "status": "curated",
+          "tags": [
+            "free",
+            "classic",
+            "windows",
+            "ultra-fast",
+            "batch-scan"
+          ],
+          "rating": 4,
+          "notes": "Legendary ultra-compact Windows graphic viewer designed to be fast, simple, and capable of handling enormous batch actions and plugins.",
+          "link": "https://www.irfanview.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-51",
+          "title": "Adobe Bridge",
+          "drawer": "Photo Management & Viewers",
+          "status": "curated",
+          "tags": [
+            "free",
+            "asset-organizer",
+            "adobe-ecosystem",
+            "metadata",
+            "batch-rename"
+          ],
+          "rating": 4,
+          "notes": "Powerful creative asset manager from Adobe allowing batch renaming, metadata tagging, rating, and Adobe Camera Raw previews without launch.",
+          "link": "https://www.adobe.com/products/bridge.html",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-52",
+          "title": "Zoner Photo Studio",
+          "drawer": "Photo Management & Viewers",
+          "status": "to-explore",
+          "tags": [
+            "paid",
+            "all-in-one",
+            "dam",
+            "video-editor",
+            "raw"
+          ],
+          "rating": 4,
+          "notes": "All-in-one photo workflow software for Windows providing DAM cataloging, RAW processing, layer-based editing, and basic video cutting.",
+          "link": "https://www.zoner.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-53",
+          "title": "Photo Mechanic",
+          "drawer": "Photo Management & Viewers",
+          "status": "curated",
+          "tags": [
+            "paid",
+            "photojournalism",
+            "superfast-culling",
+            "iptc-metadata",
+            "ingest"
+          ],
+          "rating": 5,
+          "notes": "The industry-fastest culling, tagging, and ingestion tool used worldwide by sports photographers, photojournalists, and agencies.",
+          "link": "https://home.camerabits.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-54",
+          "title": "Aseprite",
+          "drawer": "Pixel Art & Animation",
+          "status": "curated",
+          "tags": [
+            "paid",
+            "industry-standard",
+            "pixel-art",
+            "sprites",
+            "onion-skinning",
+            "tileset"
+          ],
+          "rating": 5,
+          "notes": "The premier animated sprite editor and pixel art tool featuring onion skinning, tileset modes, palette swaps, and CLI export.",
+          "link": "https://www.aseprite.org",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-55",
+          "title": "GraphicsGale",
+          "drawer": "Pixel Art & Animation",
+          "status": "to-explore",
+          "tags": [
+            "free",
+            "pixel-art",
+            "retro-animation",
+            "sprite-sheet",
+            "windows"
+          ],
+          "rating": 4,
+          "notes": "Classic freeware animation and pixel graphics editor tailored for spriting, frame control, AVI/GIF output, and onion skinning.",
+          "link": "https://graphicsgale.com/us/",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-56",
+          "title": "Piskel",
+          "drawer": "Pixel Art & Animation",
+          "status": "to-explore",
+          "tags": [
+            "free",
+            "browser",
+            "pixel-art",
+            "gif-sprites",
+            "open-source"
+          ],
+          "rating": 4,
+          "notes": "Free online animated sprite and pixel art editor with live preview, frame management, and easy export to animated GIF or spritesheet.",
+          "link": "https://www.piskelapp.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-57",
+          "title": "Pixelorama",
+          "drawer": "Pixel Art & Animation",
+          "status": "curated",
+          "tags": [
+            "free",
+            "open-source",
+            "godot-powered",
+            "pixel-art",
+            "animation"
+          ],
+          "rating": 5,
+          "notes": "Free and open-source pixel art and sprite animator built with the Godot Engine, featuring custom brushes, 3D layers, and timeline controls.",
+          "link": "https://orama-interactive.itch.io/pixelorama",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-58",
+          "title": "Hugin",
+          "drawer": "HDR, Panorama & AI Tools",
+          "status": "curated",
+          "tags": [
+            "free",
+            "open-source",
+            "panorama-stitcher",
+            "hdr",
+            "control-points"
+          ],
+          "rating": 4,
+          "notes": "Open-source panorama photo stitcher and multi-row spherical image compositor based on the Panorama Tools library.",
+          "link": "https://hugin.sourceforge.io",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-59",
+          "title": "PTGui",
+          "drawer": "HDR, Panorama & AI Tools",
+          "status": "curated",
+          "tags": [
+            "paid",
+            "spherical-panoramas",
+            "gigapixel",
+            "gpu-acceleration",
+            "hdr"
+          ],
+          "rating": 5,
+          "notes": "Gold-standard professional panorama stitching software with GPU acceleration, handling spherical 360x180 VR and gigapixel panoramas.",
+          "link": "https://ptgui.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-60",
+          "title": "Nik Collection (DxO)",
+          "drawer": "HDR, Panorama & AI Tools",
+          "status": "curated",
+          "tags": [
+            "paid",
+            "photoshop-plugin",
+            "silver-efex",
+            "color-efex",
+            "u-point"
+          ],
+          "rating": 5,
+          "notes": "Acclaimed suite of 8 photographic plugins (Silver Efex Pro, Color Efex Pro, Analog Efex, Viveza, Dfine) featuring U Point local adjustments.",
+          "link": "https://nikcollection.dxo.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-61",
+          "title": "Topaz Photo AI",
+          "drawer": "HDR, Panorama & AI Tools",
+          "status": "curated",
+          "tags": [
+            "paid",
+            "ai-upscaler",
+            "denoise",
+            "sharpening",
+            "autopilot"
+          ],
+          "rating": 5,
+          "notes": "Integrated AI-powered image enhancement suite combining neural upscaling, RAW noise reduction, motion blur repair, and face recovery.",
+          "link": "https://www.topazlabs.com/topaz-photo-ai",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-62",
+          "title": "Topaz Gigapixel AI",
+          "drawer": "HDR, Panorama & AI Tools",
+          "status": "curated",
+          "tags": [
+            "paid",
+            "ai-upscaling",
+            "super-resolution",
+            "print-enlargement",
+            "600-percent"
+          ],
+          "rating": 5,
+          "notes": "Dedicated standalone AI image upscaler capable of enlarging photos and textures up to 600% while synthesizing realistic detail.",
+          "link": "https://www.topazlabs.com/gigapixel-ai",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        },
+        {
+          "id": "item-seed-63",
+          "title": "Affinity Photo Develop Persona Plugins",
+          "drawer": "HDR, Panorama & AI Tools",
+          "status": "to-explore",
+          "tags": [
+            "free",
+            "plugins",
+            "raw-workflow",
+            "affinity-ecosystem",
+            "macros"
+          ],
+          "rating": 4,
+          "notes": "Macro packs, LUTs, and third-party plugin ecosystem designed for RAW development and non-destructive studio workflows in Affinity Photo 2.",
+          "link": "https://affinity.serif.com",
+          "logo": "",
+          "gallery": [],
+          "dateAdded": "2026-08-21T12:00:00.000Z",
+          "dateModified": "2026-08-21T12:00:00.000Z"
+        }
+      ]
+    }
+  ],
+  "exportedAt": "2026-08-21T21:16:00.000Z"
+}

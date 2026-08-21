@@ -1,0 +1,56 @@
+
+## App overview
+A single-file HTML catalog for collecting, organizing, curating, and reviewing "stuff" — items sorted into drawers (categories), each with notes, ratings, tags, and uploaded images. 
+
+## Per-item fields
+- Title
+- Drawer/category (existing or new)
+- Status (To explore / In progress / Curated / Archived)
+- Tags (comma-separated, multiple)
+- Rating (1–5)
+- Notes/description
+- Link (optional, external URL)
+- Images — uploaded by you, stored offline in the browser (no URL needed):
+  - One optional "logo" or thumbnail image (e.g. a brand/software logo)
+  - One or more additional photos/screenshots per item (a small gallery)
+- Date added / date last edited (tracked automatically)
+
+## Drawers (categories)
+- User-created, unlimited
+- Shown in sidebar with item counts
+- Can rename/delete a drawer 
+- view can be changed to detailed/list/gird/ and more
+
+## Sorting (all of these)
+- Newest added
+- Oldest added
+- Title A–Z
+- Title Z–A
+- Rating high→low
+- Rating low→high
+- Status (grouped)
+- Most tags → fewest tags
+- Recently edited
+
+## Filtering (all of these)
+- By drawer/category
+- By status (single or multi-select)
+- By tag (single or multi-select, with AND/OR toggle)
+- By rating threshold ("4★ and up")
+- Has photo / no photo
+- Has link / no link
+- Search box (title, notes, tags)
+
+## Images/storage
+- Images stored as base64 in localStorage (fully offline)
+- Client-side compression/resizing on upload so photos don't eat storage too fast
+- A storage-usage meter in the sidebar (since photos count against the ~5–10MB browser limit)
+
+## Utilities
+- Export whole catalog to a `.json` file (backup)
+- Import a `.json` file back in
+- Clear all entries
+- Add/edit/delete items via a modal form
+
+## Visual design
+- "Tech-ier" themed UI — direction to be chosen at build time from the style ideas discussed (terminal/CLI, dev-tool/IDE, ops dashboard, blueprint/schematic, or terminal-meets-paper hybrid).
