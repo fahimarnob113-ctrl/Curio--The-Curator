@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CYBER-DRAWER // Offline Curated Catalog</title>
+  <title>CURIO // The Curator</title>
   <style>
     :root {
       --bg-base: #090d16;
@@ -1640,7 +1640,7 @@
     <div class="brand-header">
       <div class="brand-title">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
-        CYBER-DRAWER
+        CURIO
         <span class="badge-tag">OFFLINE</span>
       </div>
       <button class="btn-icon-xs" id="close-sidebar-mobile-btn" style="display:none;" title="Close Menu">✕</button>
@@ -5948,7 +5948,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
       // Manifest
       const manifest = {
         version: "3.0",
-        format: "CYBER-DRAWER-ZIP-ARCHIVE",
+        format: "CURIO-ZIP-ARCHIVE",
         activeCatalogId: State.activeCatalogId,
         catalogs: State.catalogs,
         exportedAt: new Date().toISOString()
@@ -5966,7 +5966,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
-      a.download = `cyber_drawer_backup_${dateStr}.zip`;
+      a.download = `curio_backup_${dateStr}.zip`;
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);

@@ -1,4 +1,4 @@
-# Curio — The Curator (CYBER-DRAWER)
+# CURIO — The Curator
 
 An offline-first, high-capacity, cyberpunk-themed visual catalog and curation dashboard for organizing creative software, game engines, shaders, audio, reference material, and digital assets.
 
