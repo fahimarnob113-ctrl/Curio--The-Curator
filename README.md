@@ -86,20 +86,21 @@ Unlike traditional cloud bookmarkers or notes apps, CURIO runs completely on you
 
 ---
 
-## 🗃️ Included Seed Data (63 Curated Tools)
+## 🗃️ Included Pre-Loaded Catalogs (487 Items Across 6 Catalogs)
 
-The default build includes a pre-loaded library of **63 creative tools** across **11 categories**:
+CURIO comes pre-loaded with curated reference libraries:
 
-| Category / Drawer | Item Count | Featured Software |
-| :--- | :---: | :--- |
-| **Photo Editing & RAW** | 19 | Darktable, RawTherapee, DxO PhotoLab, Luminar Neo, ON1 Photo RAW, Photoshop, Photopea, GIMP, Affinity Photo 2 |
-| **Digital Art & Illustration** | 9 | Krita, Clip Studio Paint, Corel Painter, Rebelle 3, PaintTool SAI, Autodesk SketchBook, MediBang Paint |
-| **Vector & Graphic Design** | 6 | Inkscape, Affinity Designer 2, CorelDRAW, Gravit Designer, Boxy SVG, Xara Designer Pro |
-| **Publishing & Layout** | 8 | Adobe InDesign, QuarkXPress, Affinity Publisher 2, Canva, LibreOffice Draw, Scribus, Blurb BookWright |
-| **Photo Management & Viewers** | 7 | digiKam, XnView MP, FastStone Image Viewer, IrfanView, Adobe Bridge, Photo Mechanic |
-| **Pixel Art & Animation** | 4 | Aseprite, GraphicsGale, Piskel, Pixelorama |
-| **HDR, Panorama & AI Tools** | 6 | Topaz Photo AI, Topaz Gigapixel AI, PTGui, Hugin, Nik Collection (DxO) |
-| **Game Design & Tech Art** | 4 | Godot Engine 4.3, Raymarching SDF Guide, Cyberpunk Synthwave OST, Game Programming Patterns |
+1. **🎨 Creative Software & Design Tools (59 Items / 7 Drawers)**
+   - *Photo Editing & RAW, Digital Art & Illustration, Vector Design, Publishing, Asset Managers, Pixel Art, HDR & AI Plugins.*
+2. **🎮 Games Master List (246 Items / 23 Eras & Platforms)**
+   - *Arcade & Early Home, 8-bit, 16-bit, Early 3D / 5th Gen, 6th Gen, Game Boy Advance, 7th Gen, Nintendo DS, 8th Gen, Modern / 9th Gen, Indie Standouts, Mobile, J2ME / Feature Phone, E-Sports, RPGs, MMORPGs, PC Golden Age, Sports & Racing, Rhythm & VR, Dreamcast, Neo Geo, Sandbox / UGC, MAME Classics.*
+3. **📱 Smartphones & Feature Phones: 2004–2024 (51 Items / 8 Eras)**
+   - *Feature Phone Era, iPhone/Android Launch, Smartphone Boom, Peak Wars, Notch & Foldables, Recent Era (2021–2024), Major Controversies (Antennagate, Bendgate, Note 7, Batterygate, Huawei Ban), and Modern Minimalist Dumbphones.*
+4. **💻 Operating System Version Histories (64 Items / 5 Families)**
+   - *Windows (1.0 to 11), Mac OS (System 1 to macOS 15 Sequoia), Android (1.5 Cupcake to 15), iOS (iPhone OS 1 to iOS 18), and Major Linux Distributions (Debian, Arch, Ubuntu, Mint, Fedora, Red Hat, Pop!_OS, SteamOS, Gentoo, Kali, Alpine).*
+5. **🕹️ Game Dev & Tech Art (4 Items / 4 Drawers)**
+   - *Game Design & Engines, Shaders & Tech Art, Audio & Soundtracks, Reference & Docs.*
+6. **📚 Full Combined Library (63 Items / 11 Drawers)**
 
 ---
 
