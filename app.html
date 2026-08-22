@@ -1877,6 +1877,265 @@
       margin-top: 0.2rem;
     }
 
+  
+    /* --- REFINEMENT STYLES --- */
+    /* Dynamic Monogram */
+    .card-monogram {
+      width: 100%;
+      height: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .monogram-initials {
+      font-family: var(--font-mono);
+      font-size: 2rem;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      color: #ffffff;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+      z-index: 2;
+    }
+
+    .monogram-drawer-label {
+      font-size: 0.68rem;
+      color: rgba(255, 255, 255, 0.8);
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      z-index: 2;
+      margin-top: 0.2rem;
+      max-width: 90%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* Pinned item highlight */
+    .item-card.is-pinned {
+      border-color: var(--accent-amber);
+      box-shadow: 0 0 10px rgba(245, 158, 11, 0.2);
+    }
+
+    .card-pin-btn {
+      color: var(--text-dim);
+      transition: color 0.15s ease;
+    }
+
+    .card-pin-btn.active {
+      color: var(--accent-amber);
+    }
+
+    /* Pulse highlight on jump to item */
+    @keyframes pulseCardHighlight {
+      0% { box-shadow: 0 0 0px var(--accent-cyan); transform: scale(1); }
+      50% { box-shadow: 0 0 30px var(--accent-cyan), 0 0 50px var(--accent-cyan-glow); transform: scale(1.02); }
+      100% { box-shadow: 0 0 0px var(--accent-cyan); transform: scale(1); }
+    }
+
+    .card-pulse-target {
+      animation: pulseCardHighlight 1.5s ease 2;
+      border-color: var(--accent-cyan) !important;
+    }
+
+    /* Grouped View Accordion */
+    .grouped-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      width: 100%;
+    }
+
+    .group-section {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: border-color 0.2s ease;
+    }
+
+    .group-section:hover {
+      border-color: var(--border-medium);
+    }
+
+    .group-header {
+      background: var(--bg-surface-raised);
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      user-select: none;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .group-title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .group-icon {
+      font-size: 1.1rem;
+    }
+
+    .group-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .group-count-badge {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      background: var(--bg-base);
+      color: var(--accent-cyan);
+      border: 1px solid var(--border-medium);
+      padding: 0.15rem 0.5rem;
+      border-radius: 9999px;
+    }
+
+    .group-toggle-icon {
+      color: var(--text-dim);
+      font-size: 0.8rem;
+      transition: transform 0.2s ease;
+    }
+
+    .group-section.collapsed .group-toggle-icon {
+      transform: rotate(-90deg);
+    }
+
+    .group-section.collapsed .group-content {
+      display: none;
+    }
+
+    .group-content {
+      padding: 1.25rem;
+    }
+
+    /* Command Palette Modal */
+    .palette-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(4, 7, 15, 0.8);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 1000;
+      display: none;
+      align-items: flex-start;
+      justify-content: center;
+      padding-top: 10vh;
+      animation: fadeIn 0.15s ease;
+    }
+
+    .palette-backdrop.open {
+      display: flex;
+    }
+
+    .palette-window {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-bright);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 30px var(--accent-cyan-glow);
+      border-radius: var(--radius-lg);
+      width: 100%;
+      max-width: 680px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .palette-search-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--border-subtle);
+      background: var(--bg-surface-raised);
+    }
+
+    .palette-input {
+      flex: 1;
+      background: none;
+      border: none;
+      color: var(--text-main);
+      font-size: 1.1rem;
+      outline: none;
+      font-family: inherit;
+    }
+
+    .palette-results-list {
+      max-height: 420px;
+      overflow-y: auto;
+      padding: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .palette-item {
+      padding: 0.65rem 0.85rem;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      transition: all 0.1s ease;
+    }
+
+    .palette-item:hover, .palette-item.selected {
+      background: var(--bg-surface-hover);
+      border-left: 3px solid var(--accent-cyan);
+    }
+
+    .palette-item-left {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .palette-item-title {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .palette-item-subtitle {
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .palette-cat-tag {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      background: var(--bg-base);
+      color: var(--accent-cyan);
+      padding: 0.1rem 0.4rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-subtle);
+    }
+
+    .palette-footer {
+      background: var(--bg-surface-raised);
+      border-top: 1px solid var(--border-subtle);
+      padding: 0.6rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      color: var(--text-dim);
+    }
+
   </style>
 </head>
 <body>
@@ -1969,7 +2228,7 @@
         </button>
         <div class="search-input-wrap">
           <svg class="search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-          <input type="text" class="search-input" id="search-box" placeholder="Search titles, tags, notes... (Press / to focus)">
+          <input type="text" class="search-input" id="search-box" placeholder="Search items... (Press / or Ctrl+K for Global Search)">
           <button class="search-clear-btn" id="search-clear" title="Clear Search">✕</button>
         </div>
       </div>
@@ -1993,6 +2252,14 @@
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="5" height="18"></rect><rect x="10" y="3" width="5" height="12"></rect><rect x="17" y="3" width="5" height="15"></rect></svg>
             Kanban
           </button>
+          <button class="view-btn" data-view="grouped" title="Grouped Section View (Categorized / Drawers)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path><line x1="2" y1="10" x2="22" y2="10"></line></svg>
+            Grouped
+          </button>
+        </div>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="5" height="18"></rect><rect x="10" y="3" width="5" height="12"></rect><rect x="17" y="3" width="5" height="15"></rect></svg>
+            Kanban
+          </button>
         </div>
 
         <!-- Settings Action -->
@@ -2012,6 +2279,18 @@
     <!-- Filter & Sort Bar -->
     <div class="filter-panel">
       <div class="filter-row">
+                <!-- Group By Filter -->
+        <div class="filter-group" id="group-by-filter-group">
+          <span class="filter-label">Group By:</span>
+          <select class="select-custom" id="filter-group-by" title="Choose how items are grouped">
+            <option value="drawer">By Drawer / Category</option>
+            <option value="status">By Status</option>
+            <option value="rating">By Rating</option>
+            <option value="alpha">By Alphabetical</option>
+          </select>
+        </div>
+
+        <div class="filter-divider"></div>
         <!-- Status Filter -->
         <div class="filter-group">
           <span class="filter-label">Status:</span>
@@ -2467,6 +2746,24 @@
     </div>
     <div class="modal-footer">
       <button type="button" class="btn-primary" id="btn-close-settings-footer" style="margin-left:auto;">Done</button>
+    </div>
+  </div>
+</div>
+
+<!-- Universal Command Palette (Ctrl+K) -->
+<div class="palette-backdrop" id="command-palette-modal">
+  <div class="palette-window">
+    <div class="palette-search-row">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--accent-cyan);"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      <input type="text" class="palette-input" id="palette-search-input" placeholder="Search across all 15 catalogs & 1,360+ items... (Type to search)">
+      <span class="kbd-badge" style="font-size:0.7rem;">ESC</span>
+    </div>
+    <div class="palette-results-list" id="palette-results">
+      <!-- Dynamic live search results -->
+    </div>
+    <div class="palette-footer">
+      <span>Navigation: <span class="kbd-badge">↑</span> <span class="kbd-badge">↓</span> to select · <span class="kbd-badge">ENTER</span> to jump</span>
+      <span>15 Catalogs Indexed</span>
     </div>
   </div>
 </div>
@@ -29998,10 +30295,292 @@ https://github.com/nodeca/pako/blob/main/LICENSE
       }
     });
 
+        // Prioritize pinned items to top
+    result.sort((a, b) => {
+      if (a.pinned && !b.pinned) return -1;
+      if (!a.pinned && b.pinned) return 1;
+      return 0;
+    });
     return result;
   }
 
   // --- 6. RENDERERS ---
+  
+  // --- REFINEMENT LOGIC: MONOGRAMS, PIN, COPY & COMMAND PALETTE ---
+  State.groupBy = "drawer"; // "drawer", "status", "rating", "alpha"
+
+  // Generative Monogram Colors
+  const MONOGRAM_GRADIENTS = [
+    ["#06b6d4", "#3b82f6"],
+    ["#ec4899", "#8b5cf6"],
+    ["#10b981", "#059669"],
+    ["#f59e0b", "#d97706"],
+    ["#a855f7", "#6366f1"],
+    ["#f43f5e", "#fb7185"],
+    ["#14b8a6", "#0284c7"]
+  ];
+
+  function getMonogramHtml(item) {
+    const title = item.title || "Item";
+    const words = title.trim().split(/\s+/);
+    let initials = "";
+    if (words.length >= 2) {
+      initials = (words[0][0] + words[1][0]).toUpperCase();
+    } else {
+      initials = title.slice(0, 2).toUpperCase();
+    }
+
+    // Deterministic hash based on title
+    let hash = 0;
+    for (let i = 0; i < title.length; i++) {
+      hash = title.charCodeAt(i) + ((hash << 5) - hash);
+    }
+    const grad = MONOGRAM_GRADIENTS[Math.abs(hash) % MONOGRAM_GRADIENTS.length];
+
+    return `
+      <div class="card-monogram card-media-trigger" data-id="${item.id}" style="background: linear-gradient(135deg, ${grad[0]} 0%, ${grad[1]} 100%);">
+        <span class="monogram-initials">${escapeHtml(initials)}</span>
+        <span class="monogram-drawer-label">${escapeHtml(item.drawer || "")}</span>
+      </div>
+    `;
+  }
+
+  function togglePinItem(itemId, e) {
+    if (e) e.stopPropagation();
+    const item = State.items.find(i => i.id === itemId);
+    if (!item) return;
+    item.pinned = !item.pinned;
+    saveState();
+    renderAll();
+    showToast(item.pinned ? `Pinned "${item.title}" to top ⭐` : `Unpinned "${item.title}"`, "info");
+  }
+
+  function copyItemMarkdown(itemId, e) {
+    if (e) e.stopPropagation();
+    const item = State.items.find(i => i.id === itemId);
+    if (!item) return;
+    
+    let text = `[${item.title}](${item.link || '#'})`;
+    if (item.notes) text += ` — ${item.notes}`;
+    if (item.tags && item.tags.length > 0) text += ` (${item.tags.map(t => '#' + t).join(' ')})`;
+
+    navigator.clipboard.writeText(text).then(() => {
+      showToast(`Copied Markdown for "${item.title}"! 📋`, "success");
+    }).catch(() => {
+      showToast(`Failed to copy to clipboard`, "error");
+    });
+  }
+
+  // --- VIEW 5: GROUPED ACCORDION VIEW ---
+  function renderGroupedView(items, container) {
+    const groupedWrapper = document.createElement("div");
+    groupedWrapper.className = "grouped-container";
+
+    const groupBy = State.groupBy || "drawer";
+    const groups = {};
+
+    items.forEach(item => {
+      let key = "Other";
+      if (groupBy === "drawer") {
+        key = item.drawer || "General";
+      } else if (groupBy === "status") {
+        const sMap = { "to-explore": "To Explore", "in-progress": "In Progress", "curated": "Curated", "archived": "Archived" };
+        key = sMap[item.status] || "Unassigned";
+      } else if (groupBy === "rating") {
+        key = item.rating ? `★ ${item.rating} Stars` : "Unrated";
+      } else if (groupBy === "alpha") {
+        const first = (item.title || "").trim()[0];
+        key = first ? first.toUpperCase() : "#";
+        if (!/^[A-Z]$/.test(key)) key = "#";
+      }
+
+      if (!groups[key]) groups[key] = [];
+      groups[key].push(item);
+    });
+
+    // Render each group section
+    Object.keys(groups).forEach(groupName => {
+      const groupItems = groups[groupName];
+      const section = document.createElement("div");
+      section.className = "group-section";
+
+      section.innerHTML = `
+        <div class="group-header">
+          <div class="group-title-wrap">
+            <span class="group-icon">🗂️</span>
+            <span class="group-title">${escapeHtml(groupName)}</span>
+            <span class="group-count-badge">${groupItems.length} items</span>
+          </div>
+          <span class="group-toggle-icon">▼</span>
+        </div>
+        <div class="group-content">
+          <div class="catalog-grid"></div>
+        </div>
+      `;
+
+      const grid = section.querySelector(".catalog-grid");
+
+      groupItems.forEach(item => {
+        const card = document.createElement("div");
+        card.className = "item-card" + (item.pinned ? " is-pinned" : "");
+        card.id = `card-item-${item.id}`;
+
+        const heroImg = (item.gallery && item.gallery.length > 0) ? item.gallery[0] : (item.logo || "");
+        const mediaHtml = heroImg ? `
+          <div class="item-card-media card-media-trigger" data-id="${item.id}">
+            <img src="${heroImg}" alt="${escapeHtml(item.title)}">
+            ${item.gallery && item.gallery.length > 1 ? `<div class="gallery-badge">📷 ${item.gallery.length}</div>` : ""}
+            ${item.logo ? `<div class="logo-inset"><img src="${item.logo}" alt="Logo"></div>` : ""}
+          </div>
+        ` : getMonogramHtml(item);
+
+        const tagsHtml = (item.tags || []).map(t => `<span class="card-tag">#${escapeHtml(t)}</span>`).join("");
+
+        card.innerHTML = `
+          ${mediaHtml}
+          <div class="card-body">
+            <div class="card-meta-row">
+              ${getStatusBadge(item.status)}
+              <span class="drawer-chip">${escapeHtml(item.drawer)}</span>
+            </div>
+            <h3 class="card-title" title="${escapeHtml(item.title)}">${escapeHtml(item.title)}</h3>
+            ${item.notes ? `<p class="card-notes">${escapeHtml(item.notes)}</p>` : ""}
+            ${tagsHtml ? `<div class="card-tags">${tagsHtml}</div>` : ""}
+            <div class="card-footer">
+              ${getStarsHtml(item.rating)}
+              <div class="card-actions-quick">
+                <button class="btn-icon-xs card-pin-btn ${item.pinned ? 'active' : ''}" data-id="${item.id}" title="${item.pinned ? 'Unpin' : 'Pin to top'}">⭐</button>
+                <button class="btn-icon-xs card-copy-btn" data-id="${item.id}" title="Copy Markdown Link">📋</button>
+                ${item.link ? `<a href="${escapeHtml(item.link)}" target="_blank" rel="noopener noreferrer" class="btn-icon-xs" title="Open Link">🔗</a>` : ""}
+                <button class="btn-icon-xs btn-edit-item" data-id="${item.id}" title="Edit Item">✏️</button>
+              </div>
+            </div>
+          </div>
+        `;
+
+        grid.appendChild(card);
+      });
+
+      // Accordion toggle
+      section.querySelector(".group-header").addEventListener("click", () => {
+        section.classList.toggle("collapsed");
+      });
+
+      groupedWrapper.appendChild(section);
+    });
+
+    container.innerHTML = "";
+    container.appendChild(groupedWrapper);
+    attachCardEvents(container);
+  }
+
+  // --- GLOBAL COMMAND PALETTE (Ctrl+K) ---
+  let paletteSelectedIndex = 0;
+  let paletteFilteredResults = [];
+
+  function openCommandPalette() {
+    const modal = document.getElementById("command-palette-modal");
+    const input = document.getElementById("palette-search-input");
+    if (!modal || !input) return;
+
+    modal.classList.add("open");
+    input.value = "";
+    input.focus();
+    renderPaletteResults("");
+  }
+
+  function closeCommandPalette() {
+    const modal = document.getElementById("command-palette-modal");
+    if (modal) modal.classList.remove("open");
+  }
+
+  function renderPaletteResults(query) {
+    const resultsContainer = document.getElementById("palette-results");
+    if (!resultsContainer) return;
+
+    const q = query.trim().toLowerCase();
+    paletteFilteredResults = [];
+
+    // Search across all catalogs
+    State.catalogs.forEach(cat => {
+      (cat.items || []).forEach(item => {
+        if (!q || 
+            item.title.toLowerCase().includes(q) || 
+            (item.notes && item.notes.toLowerCase().includes(q)) || 
+            (item.drawer && item.drawer.toLowerCase().includes(q)) ||
+            (item.tags && item.tags.some(t => t.toLowerCase().includes(q)))) {
+          paletteFilteredResults.push({
+            catalogId: cat.id,
+            catalogName: cat.name,
+            item: item
+          });
+        }
+      });
+    });
+
+    // Cap at top 40 results
+    const displayed = paletteFilteredResults.slice(0, 40);
+    paletteSelectedIndex = 0;
+
+    if (displayed.length === 0) {
+      resultsContainer.innerHTML = `<div style="padding:1.5rem; text-align:center; color:var(--text-dim);">No matching items found across all 15 catalogs</div>`;
+      return;
+    }
+
+    resultsContainer.innerHTML = displayed.map((res, idx) => `
+      <div class="palette-item ${idx === 0 ? 'selected' : ''}" data-idx="${idx}" data-cat="${res.catalogId}" data-item-id="${res.item.id}">
+        <div class="palette-item-left">
+          <span class="palette-item-title">${escapeHtml(res.item.title)}</span>
+          <div class="palette-item-subtitle">
+            <span class="palette-cat-tag">${escapeHtml(res.catalogName)}</span>
+            <span>📁 ${escapeHtml(res.item.drawer)}</span>
+            ${res.item.rating ? `<span>★ ${res.item.rating}</span>` : ''}
+          </div>
+        </div>
+        <span style="font-size:0.75rem; color:var(--accent-cyan);">Jump ➔</span>
+      </div>
+    `).join("");
+
+    // Attach click handlers
+    resultsContainer.querySelectorAll(".palette-item").forEach(itemEl => {
+      itemEl.addEventListener("click", () => {
+        const catId = itemEl.getAttribute("data-cat");
+        const itemId = itemEl.getAttribute("data-item-id");
+        jumpToCatalogItem(catId, itemId);
+      });
+    });
+  }
+
+  function jumpToCatalogItem(catalogId, itemId) {
+    closeCommandPalette();
+
+    // Switch catalog if needed
+    if (State.activeCatalogId !== catalogId) {
+      switchCatalog(catalogId);
+    }
+
+    // Reset drawer filter to All or specific drawer so item is visible
+    const targetItem = State.items.find(i => i.id === itemId);
+    if (targetItem) {
+      State.activeDrawer = "__ALL__";
+      State.searchQuery = "";
+      document.getElementById("search-box").value = "";
+      renderAll();
+
+      // Scroll and highlight target card
+      setTimeout(() => {
+        const card = document.getElementById(`card-item-${itemId}`) || document.querySelector(`[data-id="${itemId}"]`)?.closest(".item-card, .detail-card");
+        if (card) {
+          card.scrollIntoView({ behavior: "smooth", block: "center" });
+          card.classList.add("card-pulse-target");
+          setTimeout(() => card.classList.remove("card-pulse-target"), 3500);
+        }
+      }, 250);
+
+      showToast(`Jumped to "${targetItem.title}" in ${State.activeCatalog.name}!`, "success");
+    }
+  }
+
   function renderAll() {
     renderCatalogSwitcher();
     renderSidebarDrawers();
@@ -30193,6 +30772,9 @@ https://github.com/nodeca/pako/blob/main/LICENSE
       case "kanban":
         renderKanbanView(items, container);
         break;
+      case "grouped":
+        renderGroupedView(items, container);
+        break;
     }
   }
 
@@ -30222,7 +30804,8 @@ https://github.com/nodeca/pako/blob/main/LICENSE
 
     items.forEach(item => {
       const card = document.createElement("div");
-      card.className = "item-card";
+      card.className = "item-card" + (item.pinned ? " is-pinned" : "");
+      card.id = `card-item-${item.id}`;
 
       const heroImg = (item.gallery && item.gallery.length > 0) ? item.gallery[0] : (item.logo || "");
       const galleryCount = item.gallery ? item.gallery.length : 0;
@@ -30237,15 +30820,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
           </div>
         `;
       } else {
-        mediaHtml = `
-          <div class="item-card-media card-media-trigger" data-id="${item.id}" style="height:100px;">
-            <div class="media-placeholder">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
-              <span>${escapeHtml(item.drawer)}</span>
-            </div>
-            ${item.logo ? `<div class="logo-inset"><img src="${item.logo}" alt="Logo"></div>` : ""}
-          </div>
-        `;
+        mediaHtml = getMonogramHtml(item);
       }
 
       const tagsHtml = (item.tags || []).map(t => `<span class="card-tag">#${escapeHtml(t)}</span>`).join("");
@@ -30263,6 +30838,8 @@ https://github.com/nodeca/pako/blob/main/LICENSE
           <div class="card-footer">
             ${getStarsHtml(item.rating)}
             <div class="card-actions-quick">
+              <button class="btn-icon-xs card-pin-btn ${item.pinned ? 'active' : ''}" data-id="${item.id}" title="${item.pinned ? 'Unpin' : 'Pin to top'}">⭐</button>
+              <button class="btn-icon-xs card-copy-btn" data-id="${item.id}" title="Copy Markdown Link">📋</button>
               ${item.link ? `<a href="${escapeHtml(item.link)}" target="_blank" rel="noopener noreferrer" class="btn-icon-xs" title="Open Link: ${escapeHtml(item.link)}">🔗</a>` : ""}
               <button class="btn-icon-xs btn-edit-item" data-id="${item.id}" title="Edit Item">✏️</button>
             </div>
@@ -31105,6 +31682,56 @@ https://github.com/nodeca/pako/blob/main/LICENSE
   }
 
   function initEventHandlers() {
+
+    // Group By selector
+    const groupBySelect = document.getElementById("filter-group-by");
+    if (groupBySelect) {
+      groupBySelect.addEventListener("change", (e) => {
+        State.groupBy = e.target.value;
+        if (State.activeView === "grouped") renderCatalog();
+      });
+    }
+
+    // Command Palette Input listener
+    const palInput = document.getElementById("palette-search-input");
+    if (palInput) {
+      palInput.addEventListener("input", (e) => {
+        renderPaletteResults(e.target.value);
+      });
+
+      palInput.addEventListener("keydown", (e) => {
+        const items = document.querySelectorAll(".palette-item");
+        if (e.key === "ArrowDown") {
+          e.preventDefault();
+          paletteSelectedIndex = Math.min(paletteSelectedIndex + 1, items.length - 1);
+          items.forEach((it, idx) => it.classList.toggle("selected", idx === paletteSelectedIndex));
+        } else if (e.key === "ArrowUp") {
+          e.preventDefault();
+          paletteSelectedIndex = Math.max(paletteSelectedIndex - 1, 0);
+          items.forEach((it, idx) => it.classList.toggle("selected", idx === paletteSelectedIndex));
+        } else if (e.key === "Enter") {
+          e.preventDefault();
+          if (items[paletteSelectedIndex]) items[paletteSelectedIndex].click();
+        }
+      });
+    }
+
+    // Global Ctrl+K / Cmd+K listener
+    window.addEventListener("keydown", (e) => {
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") {
+        e.preventDefault();
+        openCommandPalette();
+      }
+    });
+
+    // Close palette backdrop click
+    const palModal = document.getElementById("command-palette-modal");
+    if (palModal) {
+      palModal.addEventListener("click", (e) => {
+        if (e.target === palModal) closeCommandPalette();
+      });
+    }
+
     initSettingsHandlers();
     // Mobile Drawer Toggle
     const sidebar = document.getElementById("sidebar");
@@ -31573,6 +32200,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
         closeDrawerModal();
         closeCatalogModal();
         closeSettingsModal();
+        closeCommandPalette();
         closeLightbox();
         return;
       }
