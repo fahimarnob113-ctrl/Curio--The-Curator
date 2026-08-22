@@ -234,7 +234,6 @@
     .drawer-item {
       display: flex;
       align-items: center;
-      justify-content: space-between;
       padding: 0.5rem 0.75rem;
       border-radius: var(--radius-md);
       cursor: pointer;
@@ -243,6 +242,8 @@
       transition: all 0.15s ease;
       border: 1px solid transparent;
       flex-shrink: 0;
+      gap: 0.4rem;
+      min-width: 0;
     }
 
     .drawer-item:hover {
@@ -261,29 +262,30 @@
     .drawer-name-wrap {
       display: flex;
       align-items: center;
-      gap: 0.6rem;
-      min-width: 0;
+      gap: 0.45rem;
       flex: 1;
+      min-width: 0;
+      overflow: hidden;
     }
 
     .drawer-name-wrap svg {
       flex-shrink: 0;
-      width: 15px;
-      height: 15px;
-      stroke: currentColor;
+      width: 14px;
+      height: 14px;
+      min-width: 14px;
     }
 
     .drawer-name-wrap span {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
-      flex: 1;
       min-width: 0;
     }
 
     .drawer-actions {
       display: none;
       gap: 0.25rem;
+      flex-shrink: 0;
     }
 
     .drawer-item:hover .drawer-actions {
@@ -298,6 +300,7 @@
       padding: 0.15rem 0.45rem;
       border-radius: 9999px;
       border: 1px solid var(--border-subtle);
+      flex-shrink: 0;
     }
 
     .drawer-item.active .drawer-count {

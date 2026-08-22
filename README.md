@@ -2,14 +2,15 @@
 
 An offline-first, high-capacity visual catalog, asset organizer, and curation dashboard designed for game developers, digital artists, researchers, and creators.
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Launch%20CURIO%20Online-06B6D4?style=for-the-badge&logo=googlechrome&logoColor=white)](https://fahimarnob113-ctrl.github.io/Curio--The-Curator/)
-[![Architecture](https://img.shields.io/badge/Architecture-Single--File%20HTML-E34F26?style=flat-square&logo=html5&logoColor=white)](index.html)
-[![Storage Engine](https://img.shields.io/badge/Storage-IndexedDB%20(Gigabytes)-06B6D4?style=flat-square)](index.html)
-[![Offline Ready](https://img.shields.io/badge/Offline-100%25%20Local-10B981?style=flat-square)](index.html)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Launch%20CURIO%20App-06B6D4?style=for-the-badge&logo=googlechrome&logoColor=white)](https://fahimarnob113-ctrl.github.io/Curio--The-Curator/app.html)
+[![Website](https://img.shields.io/badge/Website-Visit%20Landing%20Page-8b5cf6?style=for-the-badge&logo=github&logoColor=white)](https://fahimarnob113-ctrl.github.io/Curio--The-Curator/)
+[![Architecture](https://img.shields.io/badge/Architecture-Single--File%20HTML-E34F26?style=flat-square&logo=html5&logoColor=white)](app.html)
+[![Storage Engine](https://img.shields.io/badge/Storage-IndexedDB%20(Gigabytes)-06B6D4?style=flat-square)](app.html)
+[![Offline Ready](https://img.shields.io/badge/Offline-100%25%20Local-10B981?style=flat-square)](app.html)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](LICENSE)
 
-> 🚀 **Live Web App**: [https://fahimarnob113-ctrl.github.io/Curio--The-Curator/](https://fahimarnob113-ctrl.github.io/Curio--The-Curator/)  
-> 📄 **Marketing & Launch Guide**: [MARKETING_GUIDE.md](MARKETING_GUIDE.md)
+> 🚀 **Launch the App**: [https://fahimarnob113-ctrl.github.io/Curio--The-Curator/app.html](https://fahimarnob113-ctrl.github.io/Curio--The-Curator/app.html)  
+> 🌐 **Landing Page**: [https://fahimarnob113-ctrl.github.io/Curio--The-Curator/](https://fahimarnob113-ctrl.github.io/Curio--The-Curator/)
 
 ![CURIO Dashboard](Screenshots/curio-dashboard.png)
 
