@@ -67,6 +67,8 @@ Unlike traditional cloud bookmarkers or notes apps, CURIO runs completely on you
 | :---: | :---: |
 | ![List View](Screenshots/List-view.png) | ![Edit View](Screenshots/Edit-view.png) |
 
+- **🎨 5 Cyberpunk & Minimalist Themes**: Switch between *Cyber Cyan* (default), *Synthwave Sunset*, *Matrix Terminal*, *Nord Frost*, and *Midnight Gold* with instant theme persistence.
+- **⚙️ Settings Hub & Live Stats HUD**: Real-time storage estimation, catalog counters, and shortcuts cheatsheet.
 - **🏷️ Scoped Tag Cloud with Live Search**:
   - Contextual tag strip that adapts to the currently active drawer.
   - Instant tag search box (`Filter...`) with expand/collapse view and item frequency badges.
@@ -74,15 +76,13 @@ Unlike traditional cloud bookmarkers or notes apps, CURIO runs completely on you
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Getting Started & Live Demo
 
-1. **Clone the Repository**:
-   `ash
-   git clone https://github.com/fahimarnob113-ctrl/Curio--The-Curator.git
-   `
-2. **Launch**:
-   Double-click index.html in any modern web browser (Chrome, Edge, Firefox, Brave, Safari, Opera).
-3. **No Setup Required**: No Node.js, Python server, or build step needed.
+- **🌐 Live Demo (GitHub Pages)**: [https://fahimarnob113-ctrl.github.io/Curio--The-Curator/](https://fahimarnob113-ctrl.github.io/Curio--The-Curator/)
+- **💻 Run Locally**:
+  1. Clone this repository: `git clone https://github.com/fahimarnob113-ctrl/Curio--The-Curator.git`
+  2. Double-click `index.html` in your browser.
+  3. No build step, node modules, or server required!
 
 ---
 
