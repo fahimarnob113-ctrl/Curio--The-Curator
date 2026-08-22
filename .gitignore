@@ -4,3 +4,6 @@ Thumbs.db
 *.tmp
 *.log
 
+
+# Local marketing notes (private)
+MARKETING_GUIDE.md

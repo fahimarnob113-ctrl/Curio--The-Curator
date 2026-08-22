@@ -593,6 +593,53 @@
       .nav-links { display: none; }
       .hero { padding: 3.5rem 0 2.5rem; }
     }
+  
+    /* Screenshot Carousel */
+    .screenshot-carousel {
+      width: 100%;
+      position: relative;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+
+    .carousel-img {
+      width: 100%;
+      display: none;
+      border-radius: var(--radius-md);
+      object-fit: cover;
+    }
+
+    .carousel-img.active {
+      display: block;
+      animation: fadeInSlide 0.4s ease;
+    }
+
+    @keyframes fadeInSlide {
+      from { opacity: 0; transform: scale(0.98); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      gap: 0.4rem;
+      margin-top: 0.6rem;
+    }
+
+    .carousel-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--border-medium);
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .carousel-dot.active {
+      background: var(--accent-cyan);
+      box-shadow: 0 0 6px var(--accent-cyan-glow);
+    }
+
   </style>
 </head>
 <body>
@@ -616,7 +663,7 @@
     </ul>
 
     <div class="nav-actions">
-      <a href="app.html" class="btn btn-primary" title="Launch the Curio App in your browser">Launch App 🚀</a>
+      <a href="index.html" class="btn btn-primary" title="Launch the Curio App in your browser">Launch App 🚀</a>
     </div>
   </header>
 
@@ -637,8 +684,8 @@
       </p>
 
       <div class="hero-cta-row">
-        <a href="app.html" class="btn btn-primary btn-lg">Launch Live Web App 🚀</a>
-        <a href="app.html" download="curio-the-curator.html" class="btn btn-secondary btn-lg">Download Single-File HTML 💾</a>
+        <a href="index.html" class="btn btn-primary btn-lg">Launch Live Web App 🚀</a>
+        <a href="index.html" download="curio-the-curator.html" class="btn btn-secondary btn-lg">Download Single-File HTML 💾</a>
         <a href="https://github.com/fahimarnob113-ctrl/Curio--The-Curator" target="_blank" class="btn btn-secondary btn-lg">Star on GitHub ⭐</a>
       </div>
 
@@ -653,7 +700,15 @@
           <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-dim);">CURIO // Offline Interactive Workspace</span>
           <span class="nav-badge">100% PRIVATE</span>
         </div>
-        <img src="Screenshots/curio-dashboard.png" alt="CURIO Dashboard Interface">
+        <div class="screenshot-carousel" id="screenshot-carousel">
+  <img class="carousel-img active" src="Screenshots/curio-dashboard.png" alt="CURIO Grid View — Main Dashboard">
+  <img class="carousel-img" src="Screenshots/Kanban View.png" alt="CURIO Kanban Workflow Board">
+  <img class="carousel-img" src="Screenshots/List-view.png" alt="CURIO Compact List View">
+  <img class="carousel-img" src="Screenshots/Drawer-View.png" alt="CURIO Drawer & Category View">
+  <img class="carousel-img" src="Screenshots/Drawer-view_2.png" alt="CURIO Drawer Categories Expanded">
+  <img class="carousel-img" src="Screenshots/Edit-view.png" alt="CURIO Item Edit Modal">
+  <div class="carousel-dots" id="carousel-dots"></div>
+</div>
       </div>
 
       <!-- Stats Ribbon -->
@@ -868,7 +923,7 @@
         </div>
 
         <div style="margin-top:1.5rem;">
-          <a href="app.html" class="btn btn-primary">Try Inside App 🚀</a>
+          <a href="index.html" class="btn btn-primary">Try Inside App 🚀</a>
         </div>
       </div>
     </div>
@@ -932,8 +987,8 @@
       <h2 style="font-size:clamp(2rem, 4vw, 3rem); font-weight:800; margin-bottom:1rem;">Ready to Curate Your World?</h2>
       <p style="color:var(--text-muted); font-size:1.1rem; max-width:600px; margin:0 auto 2rem;">Launch the web app right now in your browser with zero setup.</p>
       <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
-        <a href="app.html" class="btn btn-primary btn-lg">Launch Live App 🚀</a>
-        <a href="app.html" download="curio-the-curator.html" class="btn btn-secondary btn-lg">Download Single-File HTML 💾</a>
+        <a href="index.html" class="btn btn-primary btn-lg">Launch Live App 🚀</a>
+        <a href="index.html" download="curio-the-curator.html" class="btn btn-secondary btn-lg">Download Single-File HTML 💾</a>
       </div>
     </div>
   </section>
@@ -958,5 +1013,32 @@
       });
     }
   </script>
+
+<script>
+  (function() {
+    const imgs = document.querySelectorAll('.carousel-img');
+    const dotsContainer = document.getElementById('carousel-dots');
+    let current = 0;
+
+    imgs.forEach((_, i) => {
+      const dot = document.createElement('div');
+      dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+      dot.addEventListener('click', () => goTo(i));
+      dotsContainer.appendChild(dot);
+    });
+
+    function goTo(idx) {
+      imgs[current].classList.remove('active');
+      dotsContainer.children[current].classList.remove('active');
+      current = (idx + imgs.length) % imgs.length;
+      imgs[current].classList.add('active');
+      dotsContainer.children[current].classList.add('active');
+    }
+
+    // Auto-rotate every 3 seconds
+    setInterval(() => goTo(current + 1), 3000);
+  })();
+</script>
+
 </body>
 </html>
