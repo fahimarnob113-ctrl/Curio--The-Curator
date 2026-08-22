@@ -4,6 +4,9 @@ Thumbs.db
 *.tmp
 *.log
 
+# Desktop build artifacts & release archives
+desktop/
+*.zip
 
 # Local marketing notes (private)
 MARKETING_GUIDE.md
