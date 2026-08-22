@@ -4,6 +4,3 @@ Thumbs.db
 *.tmp
 *.log
 
-# Excluded Guides & Local Notes
-MARKETING_GUIDE.md
-
