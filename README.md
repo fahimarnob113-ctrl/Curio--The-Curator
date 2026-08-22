@@ -86,21 +86,39 @@ Unlike traditional cloud bookmarkers or notes apps, CURIO runs completely on you
 
 ---
 
-## 🗃️ Included Pre-Loaded Catalogs (487 Items Across 6 Catalogs)
+## 🗃️ Included Pre-Loaded Catalogs (1,366 Items Across 15 Catalogs)
 
-CURIO comes pre-loaded with curated reference libraries:
+CURIO comes pre-loaded with comprehensive reference libraries:
 
 1. **🎨 Creative Software & Design Tools (59 Items / 7 Drawers)**
    - *Photo Editing & RAW, Digital Art & Illustration, Vector Design, Publishing, Asset Managers, Pixel Art, HDR & AI Plugins.*
 2. **🎮 Games Master List (246 Items / 23 Eras & Platforms)**
-   - *Arcade & Early Home, 8-bit, 16-bit, Early 3D / 5th Gen, 6th Gen, Game Boy Advance, 7th Gen, Nintendo DS, 8th Gen, Modern / 9th Gen, Indie Standouts, Mobile, J2ME / Feature Phone, E-Sports, RPGs, MMORPGs, PC Golden Age, Sports & Racing, Rhythm & VR, Dreamcast, Neo Geo, Sandbox / UGC, MAME Classics.*
-3. **📱 Smartphones & Feature Phones: 2004–2024 (51 Items / 8 Eras)**
-   - *Feature Phone Era, iPhone/Android Launch, Smartphone Boom, Peak Wars, Notch & Foldables, Recent Era (2021–2024), Major Controversies (Antennagate, Bendgate, Note 7, Batterygate, Huawei Ban), and Modern Minimalist Dumbphones.*
+   - *Arcade, 8-bit, 16-bit, 5th Gen (PS1/N64), 6th Gen (PS2/GameCube), GBA, 7th Gen, DS, 8th Gen, Modern 9th Gen, Indie Standouts, Mobile, J2ME, E-Sports, RPGs, MMORPGs, PC Golden Age, Racing, VR, Dreamcast, Neo Geo, UGC, MAME Classics.*
+3. **📱 Smartphones & Feature Phones: 2004-2024 (51 Items / 8 Eras)**
+   - *Feature Phone Era, iPhone/Android Launch, Smartphone Boom, Peak Wars, Notch & Foldables, Recent Era (2021-2024), Major Controversies (Antennagate, Note 7, Batterygate, US Huawei Ban), and Modern Minimalist Dumbphones.*
 4. **💻 Operating System Version Histories (64 Items / 5 Families)**
-   - *Windows (1.0 to 11), Mac OS (System 1 to macOS 15 Sequoia), Android (1.5 Cupcake to 15), iOS (iPhone OS 1 to iOS 18), and Major Linux Distributions (Debian, Arch, Ubuntu, Mint, Fedora, Red Hat, Pop!_OS, SteamOS, Gentoo, Kali, Alpine).*
-5. **🕹️ Game Dev & Tech Art (4 Items / 4 Drawers)**
-   - *Game Design & Engines, Shaders & Tech Art, Audio & Soundtracks, Reference & Docs.*
-6. **📚 Full Combined Library (63 Items / 11 Drawers)**
+   - *Windows (1.0 to 11), Mac OS (System 1 to Sequoia 15), Android (1.5 Cupcake to 15), iOS (1 to 18), and Major Linux Distributions (Debian, Arch, Ubuntu, Mint, Fedora, RHEL, Pop!_OS, SteamOS, Gentoo, Kali, Alpine).*
+5. **🪟 Windows Software: Built-in & Iconic Apps (87 Items / 8 Drawers)**
+   - *Built-in Windows Apps, Productivity & Office, Web Browsers & Communication, Media Players & Audio, Creativity & Design, System Utilities & Tools, Compression & File Management, Security & Anti-Malware.*
+6. **🎌 Anime & Manga Eras & Iconic Titles (87 Items / 11 Drawers)**
+   - *Foundational Era (1900s-1950s), TV Anime Begins (1960s), Mecha & Sci-Fi Boom (1970s), Golden Age & Cyberpunk (1980s), 90s Explosion & Modern Classics, 2000s Mainstream Era, 2010s Streaming Boom, 2020s Contemporary Hits, Defining Manga, Iconic Anime Studios, Influential Creators.*
+7. **🏛️ Historical Figures Across Civilizations (158 Items / 19 Drawers)**
+   - *Ancient Mesopotamia & Near East, Ancient Egypt, Ancient Greece, Ancient Rome, Ancient & Classical India, Ancient & Imperial China, Islamic Golden Age, Medieval & Renaissance Europe, Early Modern to 19th Century, 20th Century & Modern Era, Pre-Columbian Americas & Africa.*
+8. **⚡ Mythological Figures Across World Traditions (164 Items / 21 Drawers)**
+   - *Greek, Roman, Norse, Egyptian, Hindu, Celtic, Japanese (Shinto), Chinese, Mesopotamian, and Mesoamerican Mythologies & Legendary Beings.*
+9. **📜 Historical Eras & Civilizations (128 Items / 17 Drawers)**
+   - *Prehistory, Ancient Near East & Mesopotamia, Ancient Egypt & Levant, Classical Greece & Hellenistic, Ancient Rome, Ancient & Classical India, Ancient & Imperial China, Post-Classical Middle East, Medieval Europe, Renaissance, Early Modern, Industrial & Modern Era.*
+10. **🕊️ World Religions & Belief Systems (66 Items / 11 Drawers)**
+    - *Abrahamic Religions, Dharmic Religions (Hinduism, Buddhism, Jainism, Sikhism), East Asian Traditions (Taoism, Confucianism, Shinto), Iranian Traditions (Zoroastrianism), Indigenous & Folk Traditions, Esoteric Movements.*
+11. **🌐 World Organizations (87 Items / 12 Drawers)**
+    - *United Nations System, Global Governance & Finance (IMF, World Bank, WTO), Military Alliances (NATO), Regional Political Blocs (EU, ASEAN, AU), Trade Blocs (OPEC, USMCA), Justice & Human Rights (ICC, Amnesty).*
+12. **🌲 World Biomes & Ecosystems (39 Items / 11 Drawers)**
+    - *Forest Biomes (Tropical, Deciduous, Taiga/Boreal), Grasslands & Savannas, Deserts & Shrublands, Tundra & Polar, Freshwater Aquatic Biomes, Marine Aquatic Biomes, Transitional Wetlands.*
+13. **🐾 Animal Kingdom Classifications (63 Items / 11 Drawers)**
+    - *Taxonomic Hierarchy, Major Invertebrate Phyla, Chordate Classes (Fish, Amphibians, Reptiles, Birds, Mammals), and Notable Mammalian & Avian Orders.*
+14. **🕹️ Game Dev & Tech Art (4 Items / 4 Drawers)**
+    - *Game Design & Engines, Shaders & Tech Art, Audio & Soundtracks, Reference & Docs.*
+15. **📚 Full Combined Library (63 Items / 11 Drawers)**
 
 ---
 
