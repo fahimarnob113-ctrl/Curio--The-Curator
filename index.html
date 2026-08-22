@@ -12103,6 +12103,18 @@ https://github.com/nodeca/pako/blob/main/LICENSE
       if (dbData.catalogs && Array.isArray(dbData.catalogs) && dbData.catalogs.length > 0) {
         State.catalogs = dbData.catalogs;
         State.activeCatalogId = dbData.activeCatalogId || dbData.catalogs[0].id;
+
+        // Auto-merge any newly shipped default catalogs that are not yet in user's database
+        let addedNew = false;
+        DEFAULT_CATALOGS.forEach(defCat => {
+          if (!State.catalogs.some(c => c.id === defCat.id)) {
+            State.catalogs.push(JSON.parse(JSON.stringify(defCat)));
+            addedNew = true;
+          }
+        });
+        if (addedNew) {
+          await saveState();
+        }
       } else {
         // Check localStorage migrations
         const v2Raw = localStorage.getItem("cyber_drawer_multi_catalog_v2") || localStorage.getItem("cyber_drawer_catalog_data_v2") || localStorage.getItem("cyber_drawer_catalog_data_v1");
@@ -12113,6 +12125,12 @@ https://github.com/nodeca/pako/blob/main/LICENSE
             if (parsed.catalogs && Array.isArray(parsed.catalogs)) {
               State.catalogs = parsed.catalogs;
               State.activeCatalogId = parsed.activeCatalogId || State.catalogs[0].id;
+              // Also ensure all default catalogs exist
+              DEFAULT_CATALOGS.forEach(defCat => {
+                if (!State.catalogs.some(c => c.id === defCat.id)) {
+                  State.catalogs.push(JSON.parse(JSON.stringify(defCat)));
+                }
+              });
             } else if (parsed.items && Array.isArray(parsed.items)) {
               State.catalogs.unshift({
                 id: "catalog-migrated-" + Date.now(),
