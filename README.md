@@ -18,6 +18,16 @@ An offline-first, high-capacity visual catalog, asset organizer, and curation da
 
 ---
 
+## 📥 Download & Usage Formats
+
+| Format | File Size | Description | Link |
+| :--- | :--- | :--- | :--- |
+| **🌐 Live Web App** | `0 MB` (Instant) | Full offline IndexedDB storage in your browser | [Launch Online](https://fahimarnob113-ctrl.github.io/Curio--The-Curator/app.html) |
+| **🪟 Windows Desktop App** | `1.07 MB` (Portable) | Native `.exe` with embedded icon & window | [Download .zip](CURIO-v1.0-Windows.zip) |
+| **📄 Single-File HTML** | `~1 MB` | 100% offline standalone vault with 15 catalogs | [Download .html](app.html) |
+
+---
+
 ## 🌟 What is CURIO?
 
 **CURIO** is a lightweight, zero-dependency curation workbench that lives in a single standalone HTML file. It allows you to collect, review, tag, rate, and organize software tools, digital assets, documentation, shaders, audio packs, and creative workflows with zero server setup.
