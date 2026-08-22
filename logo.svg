@@ -1,0 +1,145 @@
+<svg viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0e1322"/>
+      <stop offset="100%" stop-color="#060911"/>
+    </linearGradient>
+
+    <!-- Subtle inner vignette -->
+    <radialGradient id="vignette" cx="50%" cy="38%" r="75%">
+      <stop offset="0%" stop-color="#1a2138" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#060911" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Monogram C gradient -->
+    <linearGradient id="cGrad" x1="120" y1="120" x2="392" y2="392" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#67e8f9"/>
+      <stop offset="45%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+
+    <!-- Card tile gradients -->
+    <linearGradient id="tileGradBlue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#1e3a8a" stop-opacity="0.75"/>
+    </linearGradient>
+    <linearGradient id="tileGradCyan" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0891b2" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="tileGradMagenta" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fb7185" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#be123c" stop-opacity="0.7"/>
+    </linearGradient>
+
+    <!-- Sparkle gradient -->
+    <radialGradient id="sparkGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="35%" stop-color="#a5f3fc"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </radialGradient>
+
+    <!-- Glow filters -->
+    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="strongGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="tileShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+
+    <clipPath id="squircleClip">
+      <rect x="0" y="0" width="512" height="512" rx="110" ry="110"/>
+    </clipPath>
+  </defs>
+
+  <!-- Base squircle -->
+  <rect x="0" y="0" width="512" height="512" rx="110" ry="110" fill="url(#bgGrad)"/>
+
+  <g clip-path="url(#squircleClip)">
+    <!-- ambient vignette -->
+    <rect x="0" y="0" width="512" height="512" fill="url(#vignette)"/>
+
+    <!-- faint grid dots for texture -->
+    <g opacity="0.12">
+      <circle cx="70" cy="60" r="2" fill="#67e8f9"/>
+      <circle cx="446" cy="70" r="2" fill="#67e8f9"/>
+      <circle cx="90" cy="450" r="2" fill="#67e8f9"/>
+      <circle cx="430" cy="440" r="2" fill="#67e8f9"/>
+      <circle cx="256" cy="40" r="2" fill="#67e8f9"/>
+    </g>
+
+    <!-- Layered curation card tiles, fanned behind the monogram -->
+    <g filter="url(#tileShadow)">
+      <rect x="118" y="146" width="118" height="150" rx="18"
+            fill="url(#tileGradMagenta)"
+            transform="rotate(-16 177 221)" opacity="0.85"/>
+      <rect x="284" y="150" width="118" height="150" rx="18"
+            fill="url(#tileGradBlue)"
+            transform="rotate(14 343 225)" opacity="0.9"/>
+      <rect x="198" y="205" width="130" height="164" rx="20"
+            fill="url(#tileGradCyan)"
+            transform="rotate(-2 263 287)"/>
+    </g>
+
+    <!-- fine card detail lines on the front tile -->
+    <g transform="rotate(-2 263 287)" opacity="0.55" stroke="#e0fbff" stroke-width="3" stroke-linecap="round">
+      <line x1="220" y1="235" x2="306" y2="235"/>
+      <line x1="220" y1="252" x2="286" y2="252"/>
+    </g>
+
+    <!-- Bold geometric monogram C -->
+    <g filter="url(#softGlow)">
+      <path d="M 341 168
+               A 118 118 0 1 0 341 344"
+            fill="none"
+            stroke="url(#cGrad)"
+            stroke-width="46"
+            stroke-linecap="round"/>
+    </g>
+
+    <!-- Center glowing sparkle / star accent -->
+    <g filter="url(#strongGlow)">
+      <path d="M256 218
+               L268 248
+               L298 256
+               L268 264
+               L256 294
+               L244 264
+               L214 256
+               L244 248
+               Z"
+            fill="url(#sparkGrad)"/>
+    </g>
+    <circle cx="256" cy="256" r="5" fill="#ffffff" opacity="0.9"/>
+
+    <!-- small secondary sparkle -->
+    <g opacity="0.85">
+      <path d="M358 118 L362 130 L374 134 L362 138 L358 150 L354 138 L342 134 L354 130 Z"
+            fill="#f43f5e"/>
+    </g>
+
+    <!-- top highlight sheen -->
+    <rect x="0" y="0" width="512" height="512" rx="110" ry="110"
+          fill="url(#bgGrad)" opacity="0"/>
+    <path d="M0 0 H512 V150 C 380 60, 130 60, 0 150 Z"
+          fill="#ffffff" opacity="0.03"/>
+  </g>
+
+  <!-- Outer edge stroke for crispness at small sizes -->
+  <rect x="2" y="2" width="508" height="508" rx="108" ry="108"
+        fill="none" stroke="#0891b2" stroke-opacity="0.35" stroke-width="2"/>
+</svg>
