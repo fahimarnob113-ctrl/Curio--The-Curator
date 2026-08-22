@@ -18,13 +18,15 @@ An offline-first, high-capacity visual catalog, asset organizer, and curation da
 
 ---
 
-## 📥 Download & Usage Formats
+## 📥 Download & Platform Formats
 
-| Format | File Size | Description | Link |
+| Platform | Format | Package Size | Download Link |
 | :--- | :--- | :--- | :--- |
-| **🌐 Live Web App** | `0 MB` (Instant) | Full offline IndexedDB storage in your browser | [Launch Online](https://fahimarnob113-ctrl.github.io/Curio--The-Curator/app.html) |
-| **🪟 Windows Desktop App** | `1.07 MB` (Portable) | Native `.exe` with embedded icon & window | [Download .zip](CURIO-v1.0-Windows.zip) |
-| **📄 Single-File HTML** | `~1 MB` | 100% offline standalone vault with 15 catalogs | [Download .html](app.html) |
+| **🌐 Live Web App** | Browser (PWA) | `0 MB` (Instant) | [Launch Online](https://fahimarnob113-ctrl.github.io/Curio--The-Curator/app.html) |
+| **🪟 Windows Desktop** | Standalone `.exe` | `1.15 MB` | [Download Windows .zip](CURIO-v1.0-Windows.zip) |
+| **🐧 Linux Desktop** | Standalone `x64` | `708 KB` | [Download Linux .zip](CURIO-v1.0-Linux-x64.zip) |
+| **🍎 macOS Desktop** | Universal Binary | `1.40 MB` | [Download macOS .zip](CURIO-v1.0-macOS-Universal.zip) |
+| **📄 Single-File HTML** | Offline HTML5 | `~1 MB` | [Download .html](app.html) |
 
 ---
 
