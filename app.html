@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CURIO // The Curator</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#06b6d4">
   <style>
     :root {
       --bg-base: #090d16;
@@ -2257,10 +2259,6 @@
             Grouped
           </button>
         </div>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="5" height="18"></rect><rect x="10" y="3" width="5" height="12"></rect><rect x="17" y="3" width="5" height="15"></rect></svg>
-            Kanban
-          </button>
-        </div>
 
         <!-- Settings Action -->
         <button class="btn-secondary" id="btn-open-settings" title="Settings & About (Theme, Stats, Shortcuts)" style="padding: 0.5rem 0.75rem;">
@@ -2729,6 +2727,13 @@
       </div>
 
       <!-- Tab 2: Storage & Database -->
+        <div style="margin-top: 1rem; padding: 0.75rem; background: var(--bg-surface-raised); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: space-between;">
+          <div>
+            <div style="font-size:0.85rem; font-weight:700; color:var(--text-main);">📲 Install Desktop / Mobile App</div>
+            <div style="font-size:0.75rem; color:var(--text-muted);">Run CURIO in its own dedicated, distraction-free window.</div>
+          </div>
+          <button class="btn-primary" id="btn-install-pwa" style="padding: 0.4rem 0.85rem; font-size:0.8rem;">Install App</button>
+        </div>
       <div class="settings-tab-content" id="tab-storage">
         <div class="about-meta-grid" style="margin-top:0;">
           <div class="about-meta-box">
@@ -31739,6 +31744,34 @@ https://github.com/nodeca/pako/blob/main/LICENSE
       if (input) input.click();
     });
   }
+
+  
+  // --- PWA SERVICE WORKER & INSTALL PROMPT ---
+  let deferredPrompt = null;
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('./sw.js').catch(() => {});
+    });
+  }
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    const installBtn = document.getElementById('btn-install-pwa');
+    if (installBtn) {
+      installBtn.style.display = 'inline-flex';
+      installBtn.addEventListener('click', async () => {
+        if (deferredPrompt) {
+          deferredPrompt.prompt();
+          const { outcome } = await deferredPrompt.userChoice;
+          if (outcome === 'accepted') {
+            showToast('CURIO installed successfully! 🎉', 'success');
+          }
+          deferredPrompt = null;
+        }
+      });
+    }
+  });
 
   function initEventHandlers() {
 

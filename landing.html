@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CURIO — The Offline-First Visual Curator & Catalog Dashboard</title>
+  <meta name="description" content="A lightweight, zero-dependency visual catalog and curation dashboard for game developers, digital artists, researchers, and creators. Powered by IndexedDB with 15 pre-loaded reference encyclopedias.">
+  <meta property="og:title" content="CURIO — The Curator">
+  <meta property="og:description" content="Offline-first, single-file visual catalog with 1,360+ curated items, IndexedDB gigabyte storage, and 5 cyberpunk themes.">
+  <meta property="og:image" content="Screenshots/curio-dashboard.png">
+  <meta property="og:type" content="website">
+
+  <style>
+    :root {
+      --bg-base: #060911;
+      --bg-surface: #0e1322;
+      --bg-surface-raised: #161d33;
+      --bg-surface-hover: #1e2745;
+      --border-subtle: #1e293b;
+      --border-medium: #2d3b55;
+      --border-bright: #06b6d4;
+      
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      
+      --accent-cyan: #06b6d4;
+      --accent-cyan-glow: rgba(6, 182, 212, 0.35);
+      --accent-magenta: #f43f5e;
+      --accent-emerald: #10b981;
+      --accent-amber: #f59e0b;
+      --accent-purple: #a855f7;
+
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Courier New", monospace;
+    }
+
+    [data-theme="synthwave"] {
+      --bg-base: #0a0614;
+      --bg-surface: #140d28;
+      --bg-surface-raised: #20153f;
+      --border-subtle: #291a52;
+      --border-bright: #f43f5e;
+      --accent-cyan: #f43f5e;
+      --accent-cyan-glow: rgba(244, 63, 94, 0.35);
+    }
+
+    [data-theme="matrix"] {
+      --bg-base: #020703;
+      --bg-surface: #061208;
+      --bg-surface-raised: #0d2210;
+      --border-subtle: #133318;
+      --border-bright: #10b981;
+      --accent-cyan: #10b981;
+      --accent-cyan-glow: rgba(16, 185, 129, 0.35);
+    }
+
+    [data-theme="nord"] {
+      --bg-base: #12151c;
+      --bg-surface: #1b202a;
+      --bg-surface-raised: #242b39;
+      --border-subtle: #2d3648;
+      --border-bright: #38bdf8;
+      --accent-cyan: #38bdf8;
+      --accent-cyan-glow: rgba(56, 189, 248, 0.35);
+    }
+
+    [data-theme="midnight"] {
+      --bg-base: #060608;
+      --bg-surface: #0f0f13;
+      --bg-surface-raised: #18181f;
+      --border-subtle: #22222c;
+      --border-bright: #eab308;
+      --accent-cyan: #eab308;
+      --accent-cyan-glow: rgba(234, 179, 8, 0.35);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg-base);
+      color: var(--text-main);
+      line-height: 1.6;
+      overflow-x: hidden;
+      transition: background-color 0.3s ease;
+    }
+
+    /* Ambient Glow Backgrounds */
+    .ambient-glow {
+      position: fixed;
+      top: -20%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1000px;
+      height: 600px;
+      background: radial-gradient(circle, var(--accent-cyan-glow) 0%, rgba(0,0,0,0) 70%);
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.6;
+      transition: background 0.4s ease;
+    }
+
+    /* Navigation */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      background: rgba(6, 9, 17, 0.75);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 0.85rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+      color: var(--text-main);
+      font-family: var(--font-mono);
+      font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: 0.05em;
+    }
+
+    .nav-badge {
+      font-size: 0.65rem;
+      background: var(--accent-cyan-glow);
+      color: var(--accent-cyan);
+      border: 1px solid var(--accent-cyan);
+      padding: 0.15rem 0.45rem;
+      border-radius: var(--radius-sm);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.15s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-cyan);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1.2rem;
+      border-radius: var(--radius-md);
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--accent-cyan);
+      color: #040711;
+      box-shadow: 0 0 16px var(--accent-cyan-glow);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 24px var(--accent-cyan-glow);
+    }
+
+    .btn-secondary {
+      background: var(--bg-surface-raised);
+      color: var(--text-main);
+      border: 1px solid var(--border-medium);
+    }
+
+    .btn-secondary:hover {
+      background: var(--bg-surface-hover);
+      border-color: var(--accent-cyan);
+      color: var(--accent-cyan);
+    }
+
+    .btn-lg {
+      padding: 0.85rem 1.75rem;
+      font-size: 1.05rem;
+      border-radius: var(--radius-lg);
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 5.5rem 0 4rem;
+      text-align: center;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: 9999px;
+      background: var(--bg-surface-raised);
+      border: 1px solid var(--border-medium);
+      color: var(--accent-cyan);
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-title {
+      font-size: clamp(2.5rem, 6vw, 4.2rem);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-title .gradient-text {
+      background: linear-gradient(135deg, var(--accent-cyan) 0%, #a855f7 50%, #f43f5e 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+      color: var(--text-muted);
+      max-width: 760px;
+      margin: 0 auto 2.25rem;
+      font-weight: 400;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 3.5rem;
+    }
+
+    /* Hero App Window Preview */
+    .hero-window {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-xl);
+      box-shadow: 0 25px 60px -15px rgba(0,0,0,0.8), 0 0 30px var(--accent-cyan-glow);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .window-header {
+      background: var(--bg-surface-raised);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .window-dots {
+      display: flex;
+      gap: 0.45rem;
+    }
+
+    .window-dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+    }
+
+    .hero-window img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Badges Ribbon */
+    .stats-ribbon {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.25rem;
+      margin: 4rem 0 6rem;
+    }
+
+    .stat-box {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--accent-cyan);
+      font-family: var(--font-mono);
+      margin-bottom: 0.25rem;
+    }
+
+    .stat-label {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Section Styles */
+    .section {
+      padding: 5rem 0;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .section-tag {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--accent-cyan);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    /* Feature Cards */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .feature-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      transition: all 0.25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .feature-card:hover {
+      border-color: var(--border-bright);
+      transform: translateY(-4px);
+      box-shadow: 0 15px 35px -10px rgba(0,0,0,0.5);
+    }
+
+    .feature-icon {
+      font-size: 2rem;
+      margin-bottom: 1.25rem;
+      display: inline-block;
+      padding: 0.6rem 0.8rem;
+      border-radius: var(--radius-md);
+      background: var(--bg-surface-raised);
+      border: 1px solid var(--border-medium);
+    }
+
+    .feature-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+      color: var(--text-main);
+    }
+
+    .feature-desc {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+
+    /* Catalogs Grid */
+    .catalogs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+
+    .catalog-item-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      transition: all 0.2s ease;
+    }
+
+    .catalog-item-card:hover {
+      background: var(--bg-surface-raised);
+      border-color: var(--accent-cyan);
+    }
+
+    .cat-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .cat-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--text-main);
+    }
+
+    .cat-badge {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      background: var(--bg-base);
+      color: var(--accent-cyan);
+      border: 1px solid var(--border-medium);
+      padding: 0.15rem 0.45rem;
+      border-radius: 9999px;
+    }
+
+    .cat-desc {
+      font-size: 0.82rem;
+      color: var(--text-dim);
+      line-height: 1.4;
+    }
+
+    /* Interactive Theme Preview Box */
+    .theme-showcase {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-xl);
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .theme-picker-row {
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin: 2rem 0;
+    }
+
+    .theme-pill-btn {
+      background: var(--bg-surface-raised);
+      border: 2px solid var(--border-medium);
+      border-radius: 9999px;
+      padding: 0.5rem 1.25rem;
+      color: var(--text-main);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.15s ease;
+    }
+
+    .theme-pill-btn:hover {
+      border-color: var(--border-bright);
+    }
+
+    .theme-pill-btn.active {
+      border-color: var(--accent-cyan);
+      background: var(--accent-cyan-glow);
+    }
+
+    /* FAQ Accordion */
+    .faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .faq-item {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 1.25rem 1.5rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .faq-item:hover {
+      border-color: var(--border-medium);
+    }
+
+    .faq-question {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-answer {
+      margin-top: 0.75rem;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.6;
+      display: none;
+    }
+
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+
+    .faq-item.open {
+      border-color: var(--accent-cyan);
+    }
+
+    /* CTA Section */
+    .cta-banner {
+      background: linear-gradient(135deg, rgba(6, 182, 212, 0.15) 0%, rgba(168, 85, 247, 0.1) 100%);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-xl);
+      padding: 4.5rem 2rem;
+      text-align: center;
+      margin: 4rem 0 6rem;
+      box-shadow: 0 0 40px var(--accent-cyan-glow);
+    }
+
+    /* Footer */
+    .footer {
+      border-top: 1px solid var(--border-subtle);
+      padding: 3rem 0;
+      text-align: center;
+      color: var(--text-dim);
+      font-size: 0.85rem;
+    }
+
+    .footer a {
+      color: var(--accent-cyan);
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hero { padding: 3.5rem 0 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="ambient-glow"></div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <a href="#" class="nav-brand">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+      CURIO
+      <span class="nav-badge">v3.2</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#catalogs">15 Catalogs</a></li>
+      <li><a href="#themes">Themes</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="https://github.com/fahimarnob113-ctrl/Curio--The-Curator" target="_blank">GitHub</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <a href="app.html" class="btn btn-primary" title="Launch the Curio App in your browser">Launch App 🚀</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-pill">
+        <span>⚡ 100% Offline Single-File HTML5</span>
+      </div>
+
+      <h1 class="hero-title">
+        The Visual Curation Deck <br>
+        <span class="gradient-text">For Curious Minds & Creators</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        An offline-first, zero-dependency visual catalog dashboard. Organize software tools, game engines, shaders, references, and digital assets with high-capacity IndexedDB storage and 15 pre-loaded encyclopedias.
+      </p>
+
+      <div class="hero-cta-row">
+        <a href="app.html" class="btn btn-primary btn-lg">Launch Live Web App 🚀</a>
+        <a href="app.html" download="curio-the-curator.html" class="btn btn-secondary btn-lg">Download Single-File HTML 💾</a>
+        <a href="https://github.com/fahimarnob113-ctrl/Curio--The-Curator" target="_blank" class="btn btn-secondary btn-lg">Star on GitHub ⭐</a>
+      </div>
+
+      <!-- App Preview Window -->
+      <div class="hero-window">
+        <div class="window-header">
+          <div class="window-dots">
+            <span class="window-dot" style="background:#f43f5e;"></span>
+            <span class="window-dot" style="background:#f59e0b;"></span>
+            <span class="window-dot" style="background:#10b981;"></span>
+          </div>
+          <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-dim);">CURIO // Offline Interactive Workspace</span>
+          <span class="nav-badge">100% PRIVATE</span>
+        </div>
+        <img src="Screenshots/curio-dashboard.png" alt="CURIO Dashboard Interface">
+      </div>
+
+      <!-- Stats Ribbon -->
+      <div class="stats-ribbon">
+        <div class="stat-box">
+          <div class="stat-number">15</div>
+          <div class="stat-label">Pre-Loaded Catalogs</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">1,366+</div>
+          <div class="stat-label">Curated Entries</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">Gigabytes</div>
+          <div class="stat-label">IndexedDB Capacity</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">0</div>
+          <div class="stat-label">Accounts / Servers Needed</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Features -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Core Architecture</span>
+        <h2 class="section-title">Built for Speed, Privacy & Autonomy</h2>
+        <p class="section-subtitle">No monthly subscriptions. No tracking cookies. No backend maintenance. Just pure frontend elegance.</p>
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">💾</div>
+          <h3 class="feature-title">Gigabyte-Scale Local Storage</h3>
+          <p class="feature-desc">Replaces restrictive 5MB browser quotas with native <strong>IndexedDB (CyberDB)</strong>. Store hundreds of high-resolution screenshot galleries and logos locally on your machine.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📦</div>
+          <h3 class="feature-title">True ZIP Archive Backup</h3>
+          <p class="feature-desc">Export your entire multi-catalog database as a clean <code>.zip</code> package containing both structured <code>catalogs.json</code> metadata and actual extracted image files in an <code>/images/</code> folder.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🎛️</div>
+          <h3 class="feature-title">4 Reactive View Modes</h3>
+          <p class="feature-desc">Switch seamlessly between visual <strong>Grid Matrix</strong>, expanded <strong>Detailed View</strong> with photo rails, high-density <strong>Table List</strong>, and drag-and-drop <strong>Kanban Workflow</strong> boards.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🎨</div>
+          <h3 class="feature-title">5 Cyberpunk & Minimal Themes</h3>
+          <p class="feature-desc">Custom tailored color palettes: Cyber Cyan, Synthwave Sunset, Matrix Terminal, Nord Frost, and Midnight Gold with instantaneous theme persistence.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🏷️</div>
+          <h3 class="feature-title">Contextual Tag & Search Engine</h3>
+          <p class="feature-desc">Dynamic tag strips scoped to the active drawer with live tag search, item frequency badges, status pill toggles, and instant <code>/</code> keyboard search.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3 class="feature-title">Single-File Zero-Build Runtime</h3>
+          <p class="feature-desc">The entire app lives in one standalone HTML file. Double-click to run on any computer or mobile device. Zero npm installs, Python servers, or Docker containers required.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pre-loaded Catalogs Showcase -->
+  <section class="section" id="catalogs" style="background: rgba(14, 19, 34, 0.4);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Instant Value</span>
+        <h2 class="section-title">15 Pre-Loaded Reference Encyclopedias</h2>
+        <p class="section-subtitle">Start curating immediately with 1,360+ curated items across technology, gaming, history, biology, and mythology.</p>
+      </div>
+
+      <div class="catalogs-grid">
+        <div class="catalog-item-card">
+          <div class="cat-head">
+            <span class="cat-title">🎮 Games Master List</span>
+            <span class="cat-badge">246 Items</span>
+          </div>
+          <p class="cat-desc">Arcade, 8-bit, 16-bit, PS1, PS2, GBA, DS, modern 9th gen, Indies, RPGs, and MAME staples.</p>
+        </div>
+
+        <div class="catalog-item-card">
+          <div class="cat-head">
+            <span class="cat-title">🎨 Creative Software Tools</span>
+            <span class="cat-badge">59 Items</span>
+          </div>
+          <p class="cat-desc">Photo editing, RAW processors, digital painting, vector graphics, publishing & AI plugins.</p>
+        </div>
+
+        <div class="catalog-item-card">
+          <div class="cat-head">
+            <span class="cat-title">📱 Smartphones: 2004–2024</span>
+            <span class="cat-badge">51 Items</span>
+          </div>
+          <p class="cat-desc">Feature phones, iPhone/Android launches, boom era, peak wars, foldables & controversies.</p>
+        </div>
+
+        <div class="catalog-item-card">
+          <div class="cat-head">
+            <span class="cat-title">💻 OS Version Histories</span>
+            <span class="cat-badge">64 Items</span>
+          </div>
+          <p class="cat-desc">Windows (1.0–11), Mac OS (System 1–Sequoia), Android (Cupcake–15), iOS & Linux Distros.</p>
+        </div>
+
+        <div class="catalog-item-card">
+          <div class="cat-head">
+            <span class="cat-title">🪟 Windows Iconic Software</span>
+            <span class="cat-badge">87 Items</span>
+          </div>
+          <p class="cat-desc">Built-in utilities, classic media players, office suites, browsers, and security tools.</p>
+        </div>
+
+        <div class="catalog-item-card">
+          <div class="cat-head">
+            <span class="cat-title">🎌 Anime & Manga Eras</span>
+            <span class="cat-badge">87 Items</span>
+          </div>
+          <p class="cat-desc">Foundational era, 60s/70s mecha, 80s cyberpunk, 90s classics, modern streaming hits & studios.</p>
+        </div>
+
+        <div class="catalog-item-card">
+          <div class="cat-head">
+            <span class="cat-title">🏛️ Historical Figures</span>
+            <span class="cat-badge">158 Items</span>
+          </div>
+          <p class="cat-desc">Influential rulers, philosophers, scientists, reformers, and leaders across world history.</p>
+        </div>
+
+        <div class="catalog-item-card">
+          <div class="cat-head">
+            <span class="cat-title">⚡ Mythological Figures</span>
+            <span class="cat-badge">164 Items</span>
+          </div>
+          <p class="cat-desc">Greek, Norse, Egyptian, Roman, Hindu, Celtic, Shinto, and Mesoamerican deities & legends.</p>
+        </div>
+
+        <div class="catalog-item-card">
+          <div class="cat-head">
+            <span class="cat-title">📜 Historical Eras</span>
+            <span class="cat-badge">128 Items</span>
+          </div>
+          <p class="cat-desc">Prehistory, Ancient Near East, Classical Antiquity, Imperial Dynasties & Modern Eras.</p>
+        </div>
+
+        <div class="catalog-item-card">
+          <div class="cat-head">
+            <span class="cat-title">🕊️ World Religions</span>
+            <span class="cat-badge">66 Items</span>
+          </div>
+          <p class="cat-desc">Abrahamic, Dharmic, East Asian, Iranian, Indigenous, and Esoteric traditions.</p>
+        </div>
+
+        <div class="catalog-item-card">
+          <div class="cat-head">
+            <span class="cat-title">🌐 World Organizations</span>
+            <span class="cat-badge">87 Items</span>
+          </div>
+          <p class="cat-desc">UN system, global finance (IMF/WTO), military alliances (NATO), and regional trade blocs.</p>
+        </div>
+
+        <div class="catalog-item-card">
+          <div class="cat-head">
+            <span class="cat-title">🌲 World Biomes</span>
+            <span class="cat-badge">39 Items</span>
+          </div>
+          <p class="cat-desc">Tropical rainforests, taiga, savannas, tundras, polar ice caps, and marine ecosystems.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Themes Section -->
+  <section class="section" id="themes">
+    <div class="container">
+      <div class="theme-showcase">
+        <span class="section-tag">Interactive Preview</span>
+        <h2 class="section-title">Test Drive the Themes</h2>
+        <p class="section-subtitle">Click below to change the accent palette of this page in real time:</p>
+
+        <div class="theme-picker-row">
+          <button class="theme-pill-btn active" onclick="setLandingTheme('cyber')">
+            <span style="width:12px; height:12px; border-radius:50%; background:#06b6d4;"></span>
+            Cyber Cyan
+          </button>
+          <button class="theme-pill-btn" onclick="setLandingTheme('synthwave')">
+            <span style="width:12px; height:12px; border-radius:50%; background:#f43f5e;"></span>
+            Synthwave Sunset
+          </button>
+          <button class="theme-pill-btn" onclick="setLandingTheme('matrix')">
+            <span style="width:12px; height:12px; border-radius:50%; background:#10b981;"></span>
+            Matrix Terminal
+          </button>
+          <button class="theme-pill-btn" onclick="setLandingTheme('nord')">
+            <span style="width:12px; height:12px; border-radius:50%; background:#38bdf8;"></span>
+            Nord Frost
+          </button>
+          <button class="theme-pill-btn" onclick="setLandingTheme('midnight')">
+            <span style="width:12px; height:12px; border-radius:50%; background:#eab308;"></span>
+            Midnight Gold
+          </button>
+        </div>
+
+        <div style="margin-top:1.5rem;">
+          <a href="app.html" class="btn btn-primary">Try Inside App 🚀</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Common Questions</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item open" onclick="this.classList.toggle('open')">
+          <div class="faq-question">
+            <span>Is CURIO really 100% free and open-source?</span>
+            <span>▼</span>
+          </div>
+          <div class="faq-answer">
+            Yes! CURIO is licensed under the permissive MIT License. There are no subscriptions, ads, or paywalls. You can use it personally, commercially, or modify the code freely.
+          </div>
+        </div>
+
+        <div class="faq-item" onclick="this.classList.toggle('open')">
+          <div class="faq-question">
+            <span>Where are my uploaded images and data stored?</span>
+            <span>▼</span>
+          </div>
+          <div class="faq-answer">
+            Everything is stored directly on your computer's local hard drive inside your browser's dedicated <strong>IndexedDB</strong> database. No data or images are ever uploaded to an external server.
+          </div>
+        </div>
+
+        <div class="faq-item" onclick="this.classList.toggle('open')">
+          <div class="faq-question">
+            <span>How do backups work?</span>
+            <span>▼</span>
+          </div>
+          <div class="faq-answer">
+            Clicking <strong>Export</strong> packages all your catalogs into a self-contained <code>.zip</code> archive containing structured JSON metadata and an <code>/images/</code> folder with all your uploaded logos and gallery photos as real PNG/JPG files.
+          </div>
+        </div>
+
+        <div class="faq-item" onclick="this.classList.toggle('open')">
+          <div class="faq-question">
+            <span>Can I run CURIO completely without internet?</span>
+            <span>▼</span>
+          </div>
+          <div class="faq-answer">
+            Yes! All icons, CSS, fonts, and the JSZip archiver are embedded directly inside the single HTML file. You can run it on an airplane, in an offline bunker, or from a USB flash drive.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="container">
+    <div class="cta-banner">
+      <h2 style="font-size:clamp(2rem, 4vw, 3rem); font-weight:800; margin-bottom:1rem;">Ready to Curate Your World?</h2>
+      <p style="color:var(--text-muted); font-size:1.1rem; max-width:600px; margin:0 auto 2rem;">Launch the web app right now in your browser with zero setup.</p>
+      <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
+        <a href="app.html" class="btn btn-primary btn-lg">Launch Live App 🚀</a>
+        <a href="app.html" download="curio-the-curator.html" class="btn btn-secondary btn-lg">Download Single-File HTML 💾</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p style="margin-bottom:0.5rem;"><strong>CURIO — The Curator</strong> · Released under the <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a>.</p>
+      <p>Source Code on <a href="https://github.com/fahimarnob113-ctrl/Curio--The-Curator" target="_blank">GitHub</a> · Built for creators, researchers, and developers.</p>
+    </div>
+  </footer>
+
+  <script>
+    function setLandingTheme(theme) {
+      if (theme === 'cyber') {
+        document.documentElement.removeAttribute('data-theme');
+      } else {
+        document.documentElement.setAttribute('data-theme', theme);
+      }
+      document.querySelectorAll('.theme-pill-btn').forEach(b => {
+        b.classList.toggle('active', b.getAttribute('onclick').includes(theme));
+      });
+    }
+  </script>
+</body>
+</html>
