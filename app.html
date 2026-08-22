@@ -262,10 +262,23 @@
       display: flex;
       align-items: center;
       gap: 0.6rem;
+      min-width: 0;
+      flex: 1;
+    }
+
+    .drawer-name-wrap svg {
+      flex-shrink: 0;
+      width: 15px;
+      height: 15px;
+      stroke: currentColor;
+    }
+
+    .drawer-name-wrap span {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
       flex: 1;
+      min-width: 0;
     }
 
     .drawer-actions {
