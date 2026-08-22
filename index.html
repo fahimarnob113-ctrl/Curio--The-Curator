@@ -2151,6 +2151,144 @@
       color: var(--text-dim);
     }
 
+  
+    /* --- VISUAL APPEAL & BULK ACTIONS STYLES --- */
+    /* Floating Bulk Actions Bar */
+    .bulk-actions-bar {
+      position: fixed;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%) translateY(120px);
+      background: rgba(14, 19, 34, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--accent-cyan);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8), 0 0 25px var(--accent-cyan-glow);
+      border-radius: 9999px;
+      padding: 0.5rem 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      z-index: 900;
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      pointer-events: none;
+      opacity: 0;
+    }
+
+    .bulk-actions-bar.active {
+      transform: translateX(-50%) translateY(0);
+      pointer-events: auto;
+      opacity: 1;
+    }
+
+    .bulk-count-badge {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #040711;
+      background: var(--accent-cyan);
+      padding: 0.2rem 0.6rem;
+      border-radius: 9999px;
+    }
+
+    .bulk-action-btn {
+      background: var(--bg-surface-raised);
+      border: 1px solid var(--border-medium);
+      color: var(--text-main);
+      padding: 0.35rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: all 0.15s ease;
+    }
+
+    .bulk-action-btn:hover {
+      background: var(--bg-surface-hover);
+      border-color: var(--accent-cyan);
+      color: var(--accent-cyan);
+      transform: translateY(-1px);
+    }
+
+    .bulk-action-btn.danger:hover {
+      border-color: var(--accent-rose);
+      color: var(--accent-rose);
+    }
+
+    /* Card Checkbox */
+    .card-select-checkbox {
+      position: absolute;
+      top: 0.6rem;
+      left: 0.6rem;
+      width: 18px;
+      height: 18px;
+      border-radius: var(--radius-sm);
+      background: rgba(9, 13, 22, 0.85);
+      border: 2px solid var(--border-medium);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 10;
+      opacity: 0;
+      transition: all 0.15s ease;
+      color: #ffffff;
+      font-size: 0.7rem;
+      font-weight: 900;
+      user-select: none;
+    }
+
+    .item-card:hover .card-select-checkbox,
+    .detail-card:hover .card-select-checkbox,
+    .card-select-checkbox.checked,
+    .bulk-actions-bar.active .card-select-checkbox {
+      opacity: 1;
+    }
+
+    .card-select-checkbox.checked {
+      background: var(--accent-cyan);
+      border-color: var(--accent-cyan);
+      color: #040711;
+      box-shadow: 0 0 8px var(--accent-cyan-glow);
+    }
+
+    .item-card.is-selected,
+    .detail-card.is-selected {
+      border-color: var(--accent-cyan) !important;
+      background: linear-gradient(180deg, rgba(6, 182, 212, 0.08) 0%, var(--bg-surface) 100%) !important;
+      box-shadow: 0 0 15px var(--accent-cyan-glow) !important;
+    }
+
+    /* Visual Appeal: Subtle glowing card border & smooth stagger animation */
+    .item-card, .detail-card, .kanban-column {
+      position: relative;
+      transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .item-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.7), 0 0 12px var(--accent-cyan-glow);
+    }
+
+    /* Status dot indicators */
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .status-badge::before {
+      content: "";
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+
   </style>
 </head>
 <body>
@@ -2843,6 +2981,33 @@
       <span>15 Catalogs Indexed</span>
     </div>
   </div>
+</div>
+
+<!-- Floating Bulk Actions Toolbar -->
+<div class="bulk-actions-bar" id="bulk-actions-bar">
+  <span class="bulk-count-badge" id="bulk-selected-count">0 Selected</span>
+  
+  <button class="bulk-action-btn" id="bulk-move-btn" title="Move selected items to another drawer">
+    📁 Move Drawer
+  </button>
+  
+  <button class="bulk-action-btn" id="bulk-status-btn" title="Change status for selected items">
+    🚦 Status ▾
+  </button>
+  
+  <button class="bulk-action-btn" id="bulk-tag-btn" title="Add tags to all selected items">
+    🏷️ Add Tag
+  </button>
+  
+  <button class="bulk-action-btn" id="bulk-pin-btn" title="Toggle pin on selected items">
+    ⭐ Pin / Unpin
+  </button>
+  
+  <button class="bulk-action-btn danger" id="bulk-delete-btn" title="Delete all selected items">
+    🗑️ Delete
+  </button>
+  
+  <button class="btn-icon-xs" id="bulk-clear-btn" title="Clear selection" style="margin-left:0.25rem;">✕</button>
 </div>
 
 <div class="toast-container" id="toast-container"></div>
@@ -30499,7 +30664,9 @@ https://github.com/nodeca/pako/blob/main/LICENSE
 
       groupItems.forEach(item => {
         const card = document.createElement("div");
-        card.className = "item-card" + (item.pinned ? " is-pinned" : "");
+        const isSel = State.selectedItemIds.has(item.id);
+      card.className = "item-card" + (item.pinned ? " is-pinned" : "") + (isSel ? " is-selected" : "");
+      card.setAttribute("data-card-id", item.id);
         card.id = `card-item-${item.id}`;
 
         const heroImg = (item.gallery && item.gallery.length > 0) ? item.gallery[0] : (item.logo || "");
@@ -30881,7 +31048,9 @@ https://github.com/nodeca/pako/blob/main/LICENSE
 
     items.forEach(item => {
       const card = document.createElement("div");
-      card.className = "item-card" + (item.pinned ? " is-pinned" : "");
+      const isSel = State.selectedItemIds.has(item.id);
+      card.className = "item-card" + (item.pinned ? " is-pinned" : "") + (isSel ? " is-selected" : "");
+      card.setAttribute("data-card-id", item.id);
       card.id = `card-item-${item.id}`;
 
       const heroImg = (item.gallery && item.gallery.length > 0) ? item.gallery[0] : (item.logo || "");
@@ -30903,6 +31072,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
       const tagsHtml = (item.tags || []).map(t => `<span class="card-tag">#${escapeHtml(t)}</span>`).join("");
 
       card.innerHTML = `
+        <div class="card-select-checkbox ${isSel ? "checked" : ""}" data-id="${item.id}" title="Select item">${isSel ? "✓" : ""}</div>
         ${mediaHtml}
         <div class="card-body">
           <div class="card-meta-row">
@@ -31786,7 +31956,185 @@ https://github.com/nodeca/pako/blob/main/LICENSE
     }
   });
 
+  
+  // --- BULK ACTIONS CONTROLLER ---
+  State.selectedItemIds = new Set();
+
+  function toggleSelectItem(itemId, e) {
+    if (e) e.stopPropagation();
+    if (State.selectedItemIds.has(itemId)) {
+      State.selectedItemIds.delete(itemId);
+    } else {
+      State.selectedItemIds.add(itemId);
+    }
+    updateBulkBar();
+    updateCardSelectionVisuals();
+  }
+
+  function clearSelection() {
+    State.selectedItemIds.clear();
+    updateBulkBar();
+    updateCardSelectionVisuals();
+  }
+
+  function updateBulkBar() {
+    const bar = document.getElementById("bulk-actions-bar");
+    const countEl = document.getElementById("bulk-selected-count");
+    if (!bar || !countEl) return;
+
+    const count = State.selectedItemIds.size;
+    countEl.innerText = `${count} Selected`;
+
+    if (count > 0) {
+      bar.classList.add("active");
+    } else {
+      bar.classList.remove("active");
+    }
+  }
+
+  function updateCardSelectionVisuals() {
+    document.querySelectorAll(".item-card, .detail-card").forEach(card => {
+      const id = card.getAttribute("data-card-id") || card.id.replace("card-item-", "");
+      const isSelected = State.selectedItemIds.has(id);
+      card.classList.toggle("is-selected", isSelected);
+      const chk = card.querySelector(".card-select-checkbox");
+      if (chk) {
+        chk.classList.toggle("checked", isSelected);
+        chk.innerText = isSelected ? "✓" : "";
+      }
+    });
+  }
+
+  // Bulk Move to Drawer
+  function bulkMoveDrawer() {
+    if (State.selectedItemIds.size === 0) return;
+    const currentDrawers = State.drawers;
+    const targetDrawer = prompt(`Enter target drawer name to move ${State.selectedItemIds.size} items:\n\nAvailable drawers:\n- ${currentDrawers.join('\n- ')}`);
+    if (!targetDrawer || !targetDrawer.trim()) return;
+
+    const drawerClean = targetDrawer.trim();
+    if (!State.drawers.includes(drawerClean)) {
+      State.drawers.push(drawerClean);
+    }
+
+    let movedCount = 0;
+    State.items.forEach(item => {
+      if (State.selectedItemIds.has(item.id)) {
+        item.drawer = drawerClean;
+        item.dateModified = new Date().toISOString();
+        movedCount++;
+      }
+    });
+
+    saveState();
+    clearSelection();
+    renderAll();
+    showToast(`Moved ${movedCount} items to "${drawerClean}"! 📁`, "success");
+  }
+
+  // Bulk Change Status
+  function bulkChangeStatus() {
+    if (State.selectedItemIds.size === 0) return;
+    const statusChoice = prompt(`Set status for ${State.selectedItemIds.size} items:\n1 = To Explore\n2 = In Progress\n3 = Curated\n4 = Archived`);
+    if (!statusChoice) return;
+
+    const map = { "1": "to-explore", "2": "in-progress", "3": "curated", "4": "archived" };
+    const newStatus = map[statusChoice.trim()];
+    if (!newStatus) {
+      showToast("Invalid status choice", "error");
+      return;
+    }
+
+    State.items.forEach(item => {
+      if (State.selectedItemIds.has(item.id)) {
+        item.status = newStatus;
+        item.dateModified = new Date().toISOString();
+      }
+    });
+
+    saveState();
+    clearSelection();
+    renderAll();
+    showToast(`Updated status for ${State.selectedItemIds.size} items to ${newStatus}! 🚦`, "success");
+  }
+
+  // Bulk Add Tag
+  function bulkAddTag() {
+    if (State.selectedItemIds.size === 0) return;
+    const newTag = prompt(`Enter tag to add to ${State.selectedItemIds.size} items:`);
+    if (!newTag || !newTag.trim()) return;
+
+    const cleanTag = newTag.trim().toLowerCase().replace(/^#/, "");
+    State.items.forEach(item => {
+      if (State.selectedItemIds.has(item.id)) {
+        if (!item.tags) item.tags = [];
+        if (!item.tags.includes(cleanTag)) {
+          item.tags.push(cleanTag);
+        }
+        item.dateModified = new Date().toISOString();
+      }
+    });
+
+    saveState();
+    clearSelection();
+    renderAll();
+    showToast(`Added tag #${cleanTag} to ${State.selectedItemIds.size} items! 🏷️`, "success");
+  }
+
+  // Bulk Pin/Unpin
+  function bulkTogglePin() {
+    if (State.selectedItemIds.size === 0) return;
+    let anyUnpinned = false;
+    State.items.forEach(item => {
+      if (State.selectedItemIds.has(item.id) && !item.pinned) anyUnpinned = true;
+    });
+
+    const targetPinned = anyUnpinned;
+    State.items.forEach(item => {
+      if (State.selectedItemIds.has(item.id)) {
+        item.pinned = targetPinned;
+      }
+    });
+
+    saveState();
+    clearSelection();
+    renderAll();
+    showToast(targetPinned ? `Pinned selected items to top! ⭐` : `Unpinned selected items`, "info");
+  }
+
+  // Bulk Delete
+  function bulkDelete() {
+    const count = State.selectedItemIds.size;
+    if (count === 0) return;
+    if (!confirm(`Are you sure you want to permanently delete ${count} selected items?`)) return;
+
+    State.items = State.items.filter(item => !State.selectedItemIds.has(item.id));
+    saveState();
+    clearSelection();
+    renderAll();
+    showToast(`Deleted ${count} items. 🗑️`, "warn");
+  }
+
   function initEventHandlers() {
+
+    // Bulk Toolbar Actions
+    const bulkMoveBtn = document.getElementById("bulk-move-btn");
+    if (bulkMoveBtn) bulkMoveBtn.addEventListener("click", bulkMoveDrawer);
+
+    const bulkStatusBtn = document.getElementById("bulk-status-btn");
+    if (bulkStatusBtn) bulkStatusBtn.addEventListener("click", bulkChangeStatus);
+
+    const bulkTagBtn = document.getElementById("bulk-tag-btn");
+    if (bulkTagBtn) bulkTagBtn.addEventListener("click", bulkAddTag);
+
+    const bulkPinBtn = document.getElementById("bulk-pin-btn");
+    if (bulkPinBtn) bulkPinBtn.addEventListener("click", bulkTogglePin);
+
+    const bulkDelBtn = document.getElementById("bulk-delete-btn");
+    if (bulkDelBtn) bulkDelBtn.addEventListener("click", bulkDelete);
+
+    const bulkClearBtn = document.getElementById("bulk-clear-btn");
+    if (bulkClearBtn) bulkClearBtn.addEventListener("click", clearSelection);
 
     // Group By selector
     const groupBySelect = document.getElementById("filter-group-by");
