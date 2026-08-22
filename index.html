@@ -641,6 +641,81 @@
       box-shadow: 0 0 6px var(--accent-cyan-glow);
     }
 
+  
+    /* --- 3-TIER DOWNLOAD MATRIX --- */
+    .download-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .download-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.25s ease;
+    }
+
+    .download-card:hover {
+      border-color: var(--accent-cyan);
+      transform: translateY(-4px);
+      box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.8), 0 0 20px var(--accent-cyan-glow);
+    }
+
+    .download-card.featured {
+      border-color: var(--accent-cyan);
+      background: linear-gradient(180deg, rgba(6, 182, 212, 0.05) 0%, var(--bg-surface) 100%);
+    }
+
+    .download-card-badge {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 9999px;
+      font-weight: 700;
+      background: var(--accent-cyan);
+      color: #040711;
+    }
+
+    .download-card-icon {
+      font-size: 2.2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .download-card-title {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 0.4rem;
+    }
+
+    .download-card-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 1.25rem;
+    }
+
+    .download-card-meta {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      margin-bottom: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
   </style>
 </head>
 <body>
@@ -656,6 +731,7 @@
     </a>
 
     <ul class="nav-links">
+      <li><a href="#downloads">Download</a></li>
       <li><a href="#features">Features</a></li>
       <li><a href="#catalogs">15 Catalogs</a></li>
       <li><a href="#themes">Themes</a></li>
@@ -730,6 +806,65 @@
         <div class="stat-box">
           <div class="stat-number">0</div>
           <div class="stat-label">Accounts / Servers Needed</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Download Options Matrix Section -->
+  <section class="section" id="downloads" style="background: var(--bg-base); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Choose Your Experience</span>
+        <h2 class="section-title">Get CURIO for Your Workflow</h2>
+        <p class="section-subtitle">100% Free, Open Source under MIT License. Zero accounts or telemetry.</p>
+      </div>
+
+      <div class="download-grid">
+        <!-- Card 1: Web App -->
+        <div class="download-card">
+          <div>
+            <div class="download-card-icon">🌐</div>
+            <h3 class="download-card-title">Live Web App</h3>
+            <p class="download-card-desc">Run directly in any modern browser with instant zero-install access. Full IndexedDB persistence.</p>
+            <div class="download-card-meta">
+              <span>⚡ 0 MB Download</span>
+              <span>🔒 100% Client-Side</span>
+              <span>📱 Mobile & Desktop Friendly</span>
+            </div>
+          </div>
+          <a href="app.html" class="btn btn-primary" style="width:100%; justify-content:center;">Launch Web App 🚀</a>
+        </div>
+
+        <!-- Card 2: Windows Desktop (.exe) -->
+        <div class="download-card featured">
+          <span class="download-card-badge">POPULAR</span>
+          <div>
+            <div class="download-card-icon">🪟</div>
+            <h3 class="download-card-title">Windows Desktop App</h3>
+            <p class="download-card-desc">Standalone portable Windows binary with custom embedded icon, native titlebar, and zero installation.</p>
+            <div class="download-card-meta">
+              <span>📦 1.07 MB Portable Zip</span>
+              <span>⚡ Uses Native WebView2</span>
+              <span>🚀 Low Memory (~30MB RAM)</span>
+            </div>
+          </div>
+          <a href="CURIO-v1.0-Windows.zip" download="CURIO-v1.0-Windows.zip" class="btn btn-primary" style="width:100%; justify-content:center;">Download .exe (.zip) 🪟</a>
+        </div>
+
+        <!-- Card 3: Standalone HTML -->
+        <div class="download-card">
+          <div>
+            <div class="download-card-icon">📄</div>
+            <h3 class="download-card-title">Single-File HTML</h3>
+            <p class="download-card-desc">The ultimate digital heirloom. Everything (15 catalogs, JSZip, theme engine) bundled into one portable HTML file.</p>
+            <div class="download-card-meta">
+              <span>💾 ~1 MB File</span>
+              <span>📁 Runs from USB Drive</span>
+              <span>♾️ Eternal Offline Life</span>
+            </div>
+          </div>
+          <a href="app.html" download="curio-the-curator.html" class="btn btn-secondary" style="width:100%; justify-content:center;">Download .html 💾</a>
         </div>
       </div>
     </div>
