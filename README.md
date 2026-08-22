@@ -2,8 +2,9 @@
 
 An offline-first, high-capacity visual catalog, asset organizer, and curation dashboard designed for game developers, digital artists, researchers, and creators.
 
+[![GitHub Release](https://img.shields.io/badge/Release-v1.0.0%20Latest-10B981?style=for-the-badge&logo=github&logoColor=white)](https://github.com/fahimarnob113-ctrl/Curio--The-Curator/releases/tag/v1.0.0)
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Launch%20CURIO%20App-06B6D4?style=for-the-badge&logo=googlechrome&logoColor=white)](https://fahimarnob113-ctrl.github.io/Curio--The-Curator/app.html)
-[![Download Windows App](https://img.shields.io/badge/Download%20Desktop%20App-Windows%20(.exe)%20v1.0-0078D6?style=for-the-badge&logo=windows&logoColor=white)](CURIO-v1.0-Windows.zip)
+[![Download Desktop App](https://img.shields.io/badge/Download-Windows%20%7C%20Linux%20%7C%20macOS-0078D6?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/fahimarnob113-ctrl/Curio--The-Curator/releases/tag/v1.0.0)
 [![Website](https://img.shields.io/badge/Website-Visit%20Landing%20Page-8b5cf6?style=for-the-badge&logo=github&logoColor=white)](https://fahimarnob113-ctrl.github.io/Curio--The-Curator/)
 [![Architecture](https://img.shields.io/badge/Architecture-Single--File%20HTML-E34F26?style=flat-square&logo=html5&logoColor=white)](app.html)
 [![Storage Engine](https://img.shields.io/badge/Storage-IndexedDB%20(Gigabytes)-06B6D4?style=flat-square)](app.html)
@@ -18,15 +19,17 @@ An offline-first, high-capacity visual catalog, asset organizer, and curation da
 
 ---
 
-## 📥 Download & Platform Formats
+## 📦 Official Releases & Platform Downloads (v1.0.0)
 
-| Platform | Format | Package Size | Download Link |
+> 🌟 **GitHub Release Page**: [https://github.com/fahimarnob113-ctrl/Curio--The-Curator/releases/tag/v1.0.0](https://github.com/fahimarnob113-ctrl/Curio--The-Curator/releases/tag/v1.0.0)
+
+| Platform | Format | Package Size | Direct Download Mirror |
 | :--- | :--- | :--- | :--- |
-| **🌐 Live Web App** | Browser (PWA) | `0 MB` (Instant) | [Launch Online](https://fahimarnob113-ctrl.github.io/Curio--The-Curator/app.html) |
-| **🪟 Windows Desktop** | Standalone `.exe` | `1.15 MB` | [Download Windows .zip](CURIO-v1.0-Windows.zip) |
-| **🐧 Linux Desktop** | Standalone `x64` | `708 KB` | [Download Linux .zip](CURIO-v1.0-Linux-x64.zip) |
-| **🍎 macOS Desktop** | Universal Binary | `1.40 MB` | [Download macOS .zip](CURIO-v1.0-macOS-Universal.zip) |
-| **📄 Single-File HTML** | Offline HTML5 | `~1 MB` | [Download .html](app.html) |
+| **🪟 Windows Desktop** | Standalone `.exe` | `1.48 MB` | [Download Windows .zip](CURIO-v1.0-Windows.zip) · [GitHub Mirror](https://github.com/fahimarnob113-ctrl/Curio--The-Curator/raw/main/CURIO-v1.0-Windows.zip) |
+| **🐧 Linux Desktop** | Standalone `x64` | `948 KB` | [Download Linux .zip](CURIO-v1.0-Linux-x64.zip) · [GitHub Mirror](https://github.com/fahimarnob113-ctrl/Curio--The-Curator/raw/main/CURIO-v1.0-Linux-x64.zip) |
+| **🍎 macOS Desktop** | Universal Binary | `1.64 MB` | [Download macOS .zip](CURIO-v1.0-macOS-Universal.zip) · [GitHub Mirror](https://github.com/fahimarnob113-ctrl/Curio--The-Curator/raw/main/CURIO-v1.0-macOS-Universal.zip) |
+| **🌐 Live Web App** | Browser (PWA) | `0 MB` | [Launch Live Web App](https://fahimarnob113-ctrl.github.io/Curio--The-Curator/app.html) |
+| **📄 Single-File HTML** | Offline HTML5 | `~1 MB` | [Download Standalone .html](app.html) |
 
 ---
 
