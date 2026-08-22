@@ -19,30 +19,46 @@ Unlike traditional cloud bookmarkers or notes apps, CURIO runs completely on you
 
 ---
 
-## 🎯 Practical Use-Cases
+## 👥 Who is CURIO For? (Target Audience Matrix)
 
-### 🎮 1. Game Development & Tech Art Hub
-- **Engines & Frameworks**: Track engine versions (Godot, Unreal, Unity, Bevy, Raylib) with feature notes and license types.
-- **Shaders & VFX**: Collect GLSL/HLSL raymarching algorithms, distance functions, compute shader references, and procedural textures.
-- **Audio & OSTs**: Organize retro synthwave tracks, Foley sound packs, and audio middleware tools.
-- **Technical Reference**: Store game programming patterns, math cheatsheets, and architecture diagrams.
+| Audience Persona | Primary Use Case in CURIO | Pre-Loaded Catalogs Included |
+| :--- | :--- | :--- |
+| **🎮 Game Developers & Tech Artists** | Tool curation, shader math reference, engine tracking & gaming history | *Game Dev & Tech Art*, *Games Master List (246)* |
+| **🎨 Digital Artists & Animators** | Brush engines, vector/raster tools, animation timelines & proof-sheets | *Creative Software & Design*, *Anime & Manga Eras* |
+| **💻 Software Engineers & SysAdmins** | OS lineages, desktop utilities, Linux distros & smartphone hardware evolution | *OS Version Histories*, *Windows Software*, *Smartphones (2004–2024)* |
+| **🏛️ Writers, Worldbuilders & Historians** | Deep lore reference, mythologies, world history, civilizations & pantheons | *Historical Figures*, *Mythological Figures*, *Historical Eras*, *World Religions* |
+| **🌿 Biologists, Students & Educators** | Taxonomic hierarchies, biome reference decks & academic archives | *World Biomes & Ecosystems*, *Animal Kingdom Classifications* |
+| **🛡️ Privacy Enthusiasts & Self-Hosters** | Zero-cloud, 100% offline knowledge base with gigabyte IndexedDB storage | *All 15 Catalogs (1,366+ entries)* |
 
-### 🎨 2. Digital Art & Illustration Suite
-- **Painting & Inking**: Compare specialized brush engines (Krita, Clip Studio Paint, Rebelle, PaintTool SAI).
-- **Vector & UI Design**: Organize hybrid vector/raster suites (Affinity Designer, Inkscape, Boxy SVG, CorelDRAW).
+---
+
+## 🎯 Practical Use-Cases & Workflows
+
+### 🎮 1. Game Development & Tech Art Knowledge Hub
+- **Game Engines & Frameworks**: Track engine features (Godot 4.3, Unreal, Unity, Bevy, Raylib) with licensing notes, rendering backends, and version compatibility.
+- **Shaders & VFX Reference**: Catalog GLSL/HLSL raymarching algorithms, signed distance functions (SDFs), compute shaders, and procedural noise libraries.
+- **Gaming History & Mechanical Reference**: Explore a 246-game encyclopedia across 23 eras and consoles (Arcade, NES, SNES, PS1/PS2, GBA, DS, modern 9th Gen, Indies, and MAME staples).
+- **Audio & Soundtracks**: Curate retro synthwave OSTs, procedural sound generators, and middleware soundbanks.
+
+### 🎨 2. Digital Art, Animation & Creative Suite
+- **Painting & Inking Arsenals**: Compare specialized brush engines (Krita, Clip Studio Paint, Corel Painter, Rebelle, PaintTool SAI).
+- **Vector & UI Workbenches**: Organize vector/pixel hybrid tools (Affinity Designer 2, Inkscape, CorelDRAW, Boxy SVG).
+- **Anime & Manga History**: Browse 87 pivotal titles and milestones from the 1900s foundational era through the 80s cyberpunk boom and modern global streaming hits.
 - **Pixel Art & Spriting**: Manage sprite animation tools (Aseprite, GraphicsGale, Pixelorama, Piskel).
 
-### 📸 3. Photography & RAW Processing Stash
-- **RAW Developers**: Catalog Lightroom alternatives (Darktable, RawTherapee, DxO PhotoLab, Capture One).
-- **AI Enhancement**: Track neural upscalers (Topaz Photo AI, Gigapixel) and specialized plugins (Nik Collection, HDR tools).
-- **High-Speed Culling**: Compare fast asset managers and metadata viewers (digiKam, Photo Mechanic, FastStone, IrfanView).
+### 💻 3. Software Engineering, OS Lineages & Retro Tech
+- **Operating System History**: Review chronological version tables for Windows (1.0 to 11), Mac OS (System 1 to Sequoia 15), Android (1.5 to 15), iOS (1 to 18), and 14 major Linux distributions.
+- **Windows Software Archive**: Catalog 87 built-in apps, system utilities, retro media players, and security tools.
+- **Two Decades of Mobile Tech (2004–2024)**: Track 51 iconic smartphones and feature phones, from the Nokia 3310 and RAZR V3 through the iPhone boom, foldables, and major controversies (Antennagate, Note 7, Batterygate).
 
-### 📚 4. Book Publishing & Typography Desk
-- **Desktop Publishing**: Track layout software (Adobe InDesign, Affinity Publisher 2, Scribus, QuarkXPress).
-- **Print-on-Demand**: Organize self-publishing toolkits (Blurb BookWright, LibreOffice Draw, brand-kit platforms).
+### 🏛️ 4. Worldbuilding, History & Creative Writing
+- **Mythological Pantheons**: Reference 164 deities, heroes, and creatures across 10 mythological traditions (Greek, Roman, Norse, Egyptian, Hindu, Celtic, Shinto, Chinese, Mesopotamian, Mesoamerican).
+- **Historical Figures & Civilizations**: Quick-reference 158 influential rulers, philosophers, scientists, and reformers alongside 128 global historical eras.
+- **World Religions & Global Systems**: Access comparative summaries of major belief systems, international governance bodies (UN, IMF, WTO, NATO), and regional trade blocs.
 
-### 🛠️ 5. Personal Toolkit & Knowledge Vault
-- Create independent catalogs for bookmarks, self-hosted Docker apps, open-source utilities, and hardware schematics.
+### 🌿 5. Earth Sciences & Biological Taxonomy
+- **World Biomes & Ecosystems**: Reference climate traits and geographic examples across terrestrial and aquatic ecosystems (Taiga, Rainforests, Tundra, Chaparral, Coral Reefs, Abyssal zones).
+- **Animal Kingdom Classifications**: Browse taxonomic ranks from domain down to major invertebrate phyla, chordate classes, and animal orders.
 
 ---
 
